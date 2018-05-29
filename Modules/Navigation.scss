@@ -1,0 +1,390 @@
+.listNav {
+    background: $lGray;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    .listNavWrp {
+        width: 100%;
+        max-width: 1230px;
+        padding: 10px 15px;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+.navigasyon {
+    padding: 8px 0 0 0;
+    text-align: center;
+    float: left;
+    /*box-shadow: inset 2px 4px 2px -1px rgba(0, 0, 0, 0.08);*/
+    > span{
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        float: left;
+        font-size: 0;
+        a{
+            display: inline-block;
+            padding: 0px 5px 0px 0;
+            font-size: 14px;
+            float: left;
+            line-height: 25px;
+            font-family: $r;
+            color: $aGray;
+            position: relative;
+            z-index: 2;
+            &:before{
+                content:'/';
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+                position: relative;
+            }
+            &:last-child{
+                /*display: block;
+                float: none;*/
+                text-align: center;
+                &:before{ /*display: none;*/ }
+            }
+            &.home-btn{ 
+                &:before{ display: none; } 
+            }
+            &:hover {
+                color: #fff;
+            }
+            &:last-child {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.ems-page{
+    .urunDetay {
+        display: inline-block;
+        width: 100%;
+    }
+    &-detail {
+        .navWrp {
+            display: inline-block;
+            width: 100%;
+        }
+        .navigasyon {
+            background: none;
+            position: relative;
+            width: 100%;
+            display: inline-block;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            left: 0;
+            max-width: 1420px;
+            padding: 16px 20px 8px 20px;
+            > span {
+                max-width: 1430px;
+                font-size: 0;
+
+            }
+            .ems-prd-product-code {
+                position: absolute;
+                right: 15px;
+                top: 6px;
+                font-family: $bold;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .listNav {
+        .mobi-nav-elm {
+            background: $gray !important;
+            border-top: 1px solid $lGray;
+        }
+    }
+    .ems-page-detail {
+        .navigasyon {
+            position: relative;
+        }
+    }
+    .listNavWrp {
+        padding: 0px !important;
+    }
+    .urunNavigasyon {
+        position:static;
+        width: 100%;
+        min-height: auto;
+        max-height: 100vh;
+        z-index: 11;
+        background: $lGray !important;
+        /*top: 50px;*/
+        left: 0;
+        padding: 0 15px !important;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        /*padding: 20px 0;*/
+        text-align: left;
+        box-shadow:none;
+        /*border-top: 2px solid $mGray;*/
+        /*display: none;*/
+        padding: 0;
+    }
+
+    .urunNavigasyon>span {
+        display: table;
+        width: 100%;
+        padding: 0;
+    }
+
+    .urunNavigasyon>span .ems-mb-nav-close {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 15px;
+        height: 15px;
+        display: none;
+    }
+
+    .urunNavigasyon>span .ems-mb-nav-close i,.urunNavigasyon>span .ems-mb-nav-close i:before {
+        font-size: 15px
+    }
+
+    .urunNavigasyon > span a {
+        font-family: $r !important;
+        font-size: 11px !important;
+        color: $aGray;
+        position: relative;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-right: 0;
+        padding-right: 20px;
+        word-break: break-word;
+        float: none;
+        text-align: left !important;
+        text-transform: uppercase;
+        display: inline-block !important;
+        &:last-child {
+            padding-right: 0;
+            &:before {
+                /*display: none !important;*/
+            }
+        }
+    }
+
+    .urunNavigasyon > span a:after {
+        /*display: none*/ 
+    }
+
+    .urunNavigasyon > span a:before {
+        content: '/';
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $aGray;
+        position: absolute;
+        top: 50%;
+        text-align: center !important;
+        right: 0;
+        margin-top: -13px;
+        margin-right: inherit;
+        display: inline-block !important;
+    }
+
+    .urunNavigasyon > span a:first-child:before {
+        display: inline-block
+    }
+
+    .urunNavigasyon > span a.home-btn {
+        display: block
+    }
+
+    /*.urunNavigasyon > span a:nth-child(1) {
+        margin-left: 0
+    }
+
+    .urunNavigasyon > span a:nth-child(2) {
+        margin-left: 25px
+    }
+
+    .urunNavigasyon > span a:nth-child(3) {
+        margin-left: 50px
+    }
+
+    .urunNavigasyon > span a:nth-child(4) {
+        margin-left: 75px
+    }
+
+    .urunNavigasyon > span a:nth-child(5) {
+        margin-left: 100px
+    }
+    .urunNavigasyon > span a:nth-child(6) {
+        margin-left: 125px
+    }
+    .urunNavigasyon > span a:nth-child(7) {
+        margin-left: 150px
+    }
+    .urunNavigasyon > span a:nth-child(8) {
+        margin-left: 175px
+    }
+    */
+    body.mobile-navigation-animate {
+        /*overflow: hidden*/
+    }
+
+    body.mobile-navigation-animate {
+        .urunNavigasyon {
+            display: block;
+        }
+        .ems-navMobi:before {
+            content: '\e924';
+        }
+    }
+
+    body.mobile-navigation-animate .vailNavigation {
+        opacity: .5;
+        visibility: visible
+    }
+
+    .ems-navMobi {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 !important;
+            background: $lGray;
+            text-align: left;
+            display: block;
+            text-align: left;
+            font-size: 16px;
+            font-family: $sbold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 16px 20px !important;
+            &:before {
+                content: '\e905';
+                font-family: 'icomoon';
+                color: #fff;
+                font-size: 10px;
+                float: right;
+                margin-top: 5px;
+            }
+        }
+
+        .ems-page-detail {
+            .navigasyon {
+                position: fixed;
+            }
+        }
+
+        .urunNavigasyon{
+            position: fixed;
+            width: 100%;
+            min-height: auto;
+            max-height: 100vh;
+            background: #fff;
+            z-index: 11;
+            top: -100%;
+            left: 0;
+            @include transition(all .5s);
+            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 15px 15px 10px 15px !important;
+            text-align: left;
+            > span{
+                display: table;
+                width: 100%;
+                .ems-mb-nav-close{
+                    position: absolute;
+                    top: 0px;
+                    left: auto;
+                    right: 0px;
+                    padding: 0px;
+                    margin: 0 auto;
+                    width: auto;
+                    height: auto;
+                    display: inline-block;
+                    cursor: pointer;
+                    padding: 10px;
+                    z-index: 99;
+                    i, i:before{font-size:15px;}
+                }
+                a{
+                    font-family: $medium;
+                    font-size: 15px;
+                    color: $aGray;
+                    display: block !important;
+                    position: relative;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-right: 0;
+                    padding-left: 16px;
+                    word-break: break-word;
+                    &:after{display: none;}
+                    &:before{
+                        font-family: 'icomoon';
+                        content: '\e92d';
+                        width: 10px;
+                        height: 10px;
+                        font-size: 8px;
+                        font-weight: normal;
+                        color: $aGray;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        margin-top: -14px;
+                        margin-right: inherit;
+                    }
+                    &:first-child{
+                        &:before{ display: inline-block; }
+                    }
+                    &.home-btn{display: block !important;}
+                    &:nth-child(1){ margin-left:0; }
+                    &:nth-child(2){ margin-left:25px; }
+                    &:nth-child(3){ margin-left:50px; }
+                    &:nth-child(4){ margin-left:75px; }
+                    &:nth-child(5){ margin-left:100px; }
+                }
+            }
+        }
+
+        body.mobile-navigation-animate{
+            overflow: hidden;
+            .urunNavigasyon{ 
+                top: 50px;
+            }
+            .vailNavigation{opacity: .5; visibility: visible;}
+        }
+
+        .ems-page-detail {
+            .urunNavigasyon {
+                > span a:last-child {
+                    pointer-events: auto;
+                }
+            }
+        }
+
+        .mobi-nav-elm {
+            background: $lGray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            span {
+                width: 100%;
+                font-size: 11px;
+                color: $aGray;
+                text-align: left;
+                padding: 14px 15px;
+                &:after {
+                    content:'\e905';
+                    font-family: 'icomoon';
+                    display: inline-block;
+                    font-size: 8px;
+                    margin-left: 10px;
+                }
+            }
+        }
+}

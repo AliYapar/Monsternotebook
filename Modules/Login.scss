@@ -1,0 +1,539 @@
+.ems-page-default{
+    &-member-login{
+        /*max-width: 830px;*/
+        margin: 0 auto;
+        padding: 0;
+        .ems-col{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            > div{
+                width: 50%;
+                overflow: auto !important;
+                /*padding-bottom: 100px;*/
+                background: $lGray;
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(160, 160, 160, 1);
+                    box-shadow: inset 0 0 6px rgba(160, 160, 160, 1);
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(0,0,0,0.9);
+                }
+                &::-webkit-scrollbar-thumb:window-inactive {
+                    background: rgba(0,0,0,1); 
+                }
+            }
+        }
+    }
+    .ems-login{
+        float: right;
+        /*padding-left: 40px;*/
+        &-inner {
+           opacity: 0;
+           visibility: hidden;
+           max-width: 510px;
+           margin: 50px auto; 
+           /*position: relative;*/
+           @include transition (opacity .2s ease);
+           .ems-login-body {
+            background: #15161a;
+            border-radius: 2px;
+            padding: 50px 0;
+            .ems-form {
+                width: 100%;
+                max-width: 330px;
+                margin: 0 auto;
+            }
+               .ems-field {
+                margin-bottom: 20px;
+                    &.text {
+                        input {
+                            padding: 20px 10px 5px 10px;
+                            background: $lGray;
+                        }
+                    }
+                    /*&.ems-field-user:before {
+                        content: "\e933";
+                        font-family: 'icomoon';
+                        font-size: 25px;
+                        color: #000;
+                        position: absolute;
+                        top: 12px;
+                        right: 18px;
+                    }
+                    &.ems-field-pass:before {
+                        content: "\e931";
+                        font-family: 'icomoon';
+                        font-size: 25px;
+                        color: #000;
+                        position: absolute;
+                        top: 12px;
+                        right: 18px;
+                    }*/
+                    &.submit, &-submit {
+                        /*max-width: 250px;*/
+                        text-align: center;
+                        margin: 0 auto;
+                        clear: both;
+                    }
+                    &-checkout {
+                        display: none;
+                    }
+                    .btn-login-page {
+                        color: #000;
+                        font-size: 15px;
+                        letter-spacing: .9px;
+                        display: block;
+                        padding-top: 20px;
+                        margin: 0;
+                        text-align: center;
+                        u {
+                            font-family: "sbold";
+                            color: $orange;
+                        }
+                    }
+                    .btnFacebookLogin {
+                        padding: 15px 20px;
+                        span {
+                            
+                        }
+                    }
+                    .lnkSifremiUnuttum {
+                        font-size: 15px;
+                        color: $aGray;
+                        text-align: left;
+                        font-family: $medium;
+                        margin-bottom: 30px;
+                        text-decoration: underline;
+                    }
+                    &.ems-field-remember {
+                        float: right;
+                        margin-bottom: 30px;
+                        .ems-form-obj {
+                            margin: 0;
+                            span[id$="lbfUYE_BENIHATIRLA_FL"] {
+                                font-size: 14px;
+                                font-family:  $bold;
+                                color: $aGray;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    &.ems-field-password-forget {
+                        .ems-form-obj {
+                            text-decoration: none;
+                        }
+                        float: left;
+                        margin: 0;
+                    }
+                    &.loginCaptcha {
+                        display: inline-block;
+                    }
+               }
+           }
+        }
+    }
+    .ems-signup{
+        float: left;     
+        &-inner {
+            opacity: 0;
+            visibility: hidden;
+            max-width: 510px;
+            margin: 50px auto;
+            position: relative;
+            top: 0px;
+            @include transition (opacity .2s ease); 
+            .ems-signup-body {
+                background: $gray;
+                border-radius: 2px;
+                padding: 50px 0;
+                .ems-form {
+                    width: 100%;
+                    max-width: 330px;
+                    margin: 0 auto;
+                }
+                .ems-field {
+                    margin-bottom: 20px;
+                    &.ems-field-checkbox {
+                        &.first {
+                            margin-top: 30px; 
+                        }
+                        &.last {
+                            margin-bottom: 30px;
+                        }
+                    }
+                    &-submit {
+
+                    }
+                    .ems-form-obj {
+                        input, .sStylerWrp {
+                            background: $lGray;
+                        }
+                    }
+                    .btn-login-page {
+                        text-align: center;
+                        color: #000;
+                        font-size: 15px;
+                        letter-spacing: .9px;
+                        display: block;
+                        padding-top: 20px;
+                        margin: 0;
+                        text-align: center;
+                        u {
+                            font-family: "sbold";
+                            color: $orange;
+                        }
+                    }
+                }
+           }
+         }
+    }
+}
+
+.logTab {
+    .btn-login-page {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-family: $bold;
+        text-align: center;
+        margin: 0;
+        a {
+            width: 100%;
+            color: $aGray;
+            padding:15px 10px;
+        }
+        span {
+            width: 100%;
+            background: $gray;
+            color: $green;
+            padding:15px 10px;
+        }
+    }
+}
+
+.ems-signup-body {
+    .ems-page-default{
+        .ems-col {
+            flex-direction: row-reverse;
+        }
+        .ems-login{
+            background:url(#{$baseHref + "/UPLOAD/BANNERS/login/login.jpg"}) center center / cover no-repeat;
+            animation: animatedBg 2s forwards;
+            &-inner {
+                display: none;
+                opacity: 0;
+                visibility: hidden;
+             }
+        }
+        .ems-signup{
+            position: relative;
+            z-index: 999;
+            &-inner {
+                opacity: 1;
+                visibility: visible;
+                top: 0;
+                /*animation: loginTop 1s forwards;*/
+             }
+        }
+    }
+}
+.ems-signin-body {
+    .ems-page-default{
+        .ems-login{
+            position: relative;
+            z-index: 999;
+            &-inner {
+                opacity: 1;
+                visibility: visible;
+                /*animation: loginTop 1s forwards;*/
+             }
+        }
+        .ems-signup{
+            background:url(#{$baseHref + "/UPLOAD/BANNERS/login/login.jpg"}) center center / cover no-repeat;
+            animation: animatedBg 2s forwards;
+            &-inner {
+                display: none;
+                opacity: 0;
+                visibility: hidden;
+             }
+        }
+    }
+}
+
+/* Keyframe Login */
+@keyframes loginTop {
+    from {top: -100px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+$sss : 120%;
+$ssk : 100%;
+
+@-webkit-keyframes animatedBg {
+    0% {
+        transform: scale(1);
+        -webkit-filter: brightness(1);
+     }
+  
+    50% {
+        transform: scale(1.1);
+        -webkit-filter: brightness(1.8) sepia(0.5);
+    } 
+    100% {
+        transform: scale(1);
+        -webkit-filter: brightness(1);
+    }
+  }
+  
+/***/
+.ems-login-box {
+    .ems-message{
+        margin-bottom: 20px;
+        background: $gray;
+        border-radius: 5px;
+        padding: 20px !important;
+    }
+    .ems-signup-header,
+    .ems-login-header{
+        .loginLogo {
+            margin:0 auto 60px auto;
+            display: block;
+            text-align: center;
+        }
+        .mbBack { 
+            position: absolute;
+            font-size: 15px;
+            left: 20px;
+            top: 23px;
+            padding: 7px;
+            border-radius: 3px;
+            &:hover {
+                background: $green;
+                color: #fff;
+            }
+        }
+        .lgBack { 
+            position: fixed;
+            font-size: 15px;
+            left: 20px;
+            top: 23px;
+            padding: 7px;
+            border-radius: 3px;
+            &:hover {
+                background: $orange;
+                color: #fff;
+            }
+        }
+        h4{
+            font-size: 30px;
+            font-family: $sbold;
+            display: inline-block;
+            padding-bottom: 20px;
+            margin: 0;
+            text-align: center;
+        }
+        span {
+            font-size: 12px;
+            font-family: $r;
+            padding-bottom: 30px;
+            text-align: center;
+            display: block;
+            color: #fff;
+        }
+        .swiper-alpha {display: none;}
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .vailLogin{display: none;}
+    .ems-page-default{
+        .ems-login-inner {
+            margin: 0px auto;
+            max-width: none;
+            background: $gray;
+        }
+        &-member-login{
+            max-width: 100%;
+            padding: 0;
+            -webkit-overflow-scrolling: touch;
+            .ems-login-header {
+                span {
+                    background: none !important;
+                }
+                .loginLogo {
+                    margin: 0 auto 20px auto;
+                }   
+            }
+            .logTab {
+                .btn-login-page {
+                    span {
+                        background: $lGray; 
+                    }
+                    a {
+                        background: $gray;
+                    }
+                }
+            }
+            .ems-login-body, .ems-signup-body {
+                background: $lGray !important;
+                .ems-field {
+                    &.text {
+                        input, .sStylerWrp {
+                            background: $gray !important;
+                        }
+                    }
+                }
+            }
+            .ems-col{
+                > div{
+                    width: 100%;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .ems-login{
+            padding-left: 0;
+        }
+        .ems-signup{
+            display: none;
+            padding-right: 0;
+            border:none;
+            &-body {
+                background: $lGray !important;
+            }
+            &-header {
+                .loginLogo {
+                    margin: 0 auto 20px auto;
+                }
+                .mbBack { 
+                    position: absolute;
+                }
+                .lgBack { 
+                    position: absolute;
+                    right: 20px;
+                    left: auto;
+                }
+            }
+            &-inner {
+                margin: 0px auto;
+                max-width: none;
+            }
+        }
+        .ems-login, .ems-signup{
+            float: none;
+            width: 100%;
+            .ems-form{
+                margin: 5% 4% 6% 4%;
+                position: relative;
+                z-index: 1;
+                &-inner{
+                    .ems-field{
+                        &-other, &-submit, &-hidden, &-left, &.submit{
+                            .ems-form-obj{
+                                margin-left: 0;
+                            }
+                        }
+                        &-checkbox{
+                            .ems-form-obj{margin-top: 20px;}
+                        }
+                        .ems-form-obj{    
+                            &-alternate{
+                                margin-right:0;
+                            }
+                        }
+                        &-hidden{
+                            &.text{
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                        &-submit, &.submit{
+                            .ems-form-obj{
+                                a.btnDefault{
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                }
+                            }
+                        }
+                        .btn-login-page{
+                            color: #191e23;
+                            font-size: 13px;
+                            margin: 0;
+                            padding-top: 10px;
+                            a{
+                                display: inline-block;
+                                padding: 10px;
+                                font-family: $regular;
+                                u{
+                                    font-family: $bold;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ems-login-box {
+        .ems-signup-header,
+        .ems-login-header{
+            position: relative;
+            margin: 0 auto;
+            span{
+                background: $gray;
+                text-align: center;
+                font-size: 14px;
+                padding-top: 16px;
+                padding-bottom: 17px;
+                position: relative;
+                z-index: 1;
+                &.loginTitle {
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    bottom: 30px;
+                }
+            }
+            .loginImg {
+                height: 320px;
+                width: 100%;
+                display: none;
+            }
+            .loginLogo {
+                img {
+                    width: 250px;
+                }
+                span {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 0;
+                    left: 0;
+                }
+            }
+            .swiper-alpha {
+                display: none; 
+                height: 120px;
+                @include linear-gradient(to bottom, rgba(255,255,255,0.6) 0%, rgba(255,255,255,1) 80%);
+            }
+            h4 {
+            }
+            .mbBack {
+                right: 20px;
+                left: auto;
+            }
+        }
+    }
+    body.ems-signup-body{
+        .ems-page-default{
+            .ems-login{ display: none;}
+            .ems-signup{ display: block; overflow: hidden;}
+        }
+    }
+}

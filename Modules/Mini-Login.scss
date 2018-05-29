@@ -1,0 +1,475 @@
+.mod-mini-login{
+    /*border-left: 1px solid $gray;*/
+    &-header{
+        cursor: pointer;
+        font-family: $regular;
+        font-size: 14px;
+        /*letter-spacing: .9px;*/
+        padding: 11px 20px;
+        min-width: 80px;
+        text-align: center;
+        min-height: 50px;
+        color: #fff;
+        @include transition(background-color .2s ease);
+        > span[id$="lbhKUTU_HESABIM"]{
+            display: inline-block;
+        }
+        i.icon-ico_user {
+            &:before {
+                font-size: 24px;
+                /*margin-right: 20px;*/
+                position: relative;
+                top: 3px;
+            }
+        }
+        i.icon-ico_arw-bottom {
+            &:before {
+                font-size: 9px;
+                margin-left: 40px;
+                position: relative;
+                top: -2px;
+            }
+        }
+        &:hover {
+           
+        }
+        .btn-signin-span {
+            display: none;
+        }
+    }
+    &-footer{ display: none; }
+    &-body{
+        .sub {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            z-index: 10;
+            background: $lGray;
+            width: 307px;
+            padding: 30px 30px;
+            border-bottom-left-radius: 2px;
+            @include animation(cart 333ms ease);
+            .ems-message{
+                margin-bottom: 20px;
+                &:empty{ display: none; }
+            }
+            .sub-title{
+                margin: 0;
+                font-weight: normal;
+                font-size: 25px;
+                letter-spacing: .5px;
+                color: #fff;
+                font-family: $sbold;
+                padding-bottom: 30px;
+                text-align: center;
+                display: block;
+            }
+            .loginLogo {
+                margin:0 auto 60px auto;
+                display: block;
+                text-align: center;
+            }
+            .ems-form{
+                max-width: 510px;
+                margin: 0 auto;
+                background: $gray;
+                border-radius: 2px;
+                padding: 50px 0;
+                border-radius: 2px;
+                &-inner{
+                    max-width: 360px;
+                    margin: 0 auto;
+                    .ems-field{
+                        .seperator span{
+                            display: block;
+                            padding: 15px 0 15px 0;
+                            text-align: center;
+                            color: $aGray;
+                            font-size: 14px;
+                            text-decoration: underline;
+                            font-family: "bold";
+                        }
+                        .ems-form-obj{
+                            input{
+                                background: $lGray;
+                                /*background: transparent;
+                                color: #000;
+                                border-color: $orange;
+                                height: 50px;
+                                border-radius: 2px;
+                                font-size: 16px;
+                                font-family: $medium;
+                                padding: 20px 50px 5px 10px;*/
+                            }
+                        }
+                        #lnkSifremiUnuttum{
+                            padding: 0 0 0 5px;
+                            display: inline-block;
+                            margin-bottom: 20px;
+                            span{
+                                font-size: 14px;
+                                color: $aGray;
+                                font-family: $regular;
+                                text-decoration: underline;
+                            }
+                        }
+                        &-submit{
+                            a.btnKutuLogin, a.btnFacebookLoginKutu{
+                                /*max-width: 250px;*/
+                                padding: 15px 20px;
+                            }
+                            a.btnKutuLogin {
+                                background: $green;
+                                &:hover {
+                                    background: $blue;
+                                }
+                            }
+                        }
+                        
+                        #lnkGuestCheckout {
+                            display: none;
+                            margin-top: 20px;
+                            padding: 15px 5px 15px 5px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            color: #fff;
+                            background: #2a2b30;
+                            border-radius: 3px;
+                            text-align: center;
+                            width: 100%;
+                            line-height: 1;
+                            font-family: "bold";
+                            letter-spacing: 1px;
+                            &:hover {
+                                background: $blue;
+                            }
+                        }
+                        &-free{
+                            span[id$="lbflnkUyeOlmak"]{
+                                color: $aGray;
+                                font-size: 14px;
+                                padding-top: 20px;
+                                letter-spacing: .9px;
+                                display: inline-block;
+                                padding-top: 20px;
+                                a.lnkUyeOlmak{
+                                    font-family: $sbold;
+                                    color: $green;
+                                    text-decoration: underline;
+                                    &:hover {
+                                        color: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.login{
+                width: 326px;
+                padding: 20px;
+            }
+            .ems-user-info{
+                /*display: none;*/
+                .member-account {
+                    display: none;
+                }
+                span[id$="lblUYE_ADSOYAD"] {
+                    font-family: $sbold;
+                    font-size: 18px;
+                    color:#fff;
+                    border-bottom: 1px solid $mGray;
+                    padding: 10px 0 20px 10px;
+                    margin-bottom: 20px;
+                    display: block;
+                }
+            }
+            .ems-user-pages{
+                > div * {
+                    
+                    font-size: 14px;
+                    font-family: $r;
+                    color:#fff;
+                }
+                > div {
+                    a{
+                        display: inline-block;
+                        padding:7px 10px;
+                        &.btnKutuLogout{
+                            padding: 15px 17px 15px 17px;
+                            position: absolute;
+                            right: 20px;
+                            top: 17px;
+                            background: none;
+                            width: auto;
+                            text-transform: none;
+                            span {
+                                color: $green;
+                                font-family: $medium;
+                                &:before {display: none;}
+                            }
+                        }
+                        &:hover{ 
+                            background: none;
+                            span {
+                                color: $aGray;
+                            }
+                        }
+                    }
+                }               
+            }
+        }
+        .logoff-img {
+            position: fixed;
+            right: 0;
+            top: 0px;
+            width: 50%;
+            height: 100%;
+            background:url(#{$baseHref + "/UPLOAD/BANNERS/login/login.jpg"}) center center / cover no-repeat;
+            z-index: 5;
+            display: none;
+        }
+    }
+}
+
+body.mini-login-ready{
+    .mod-mini-login{
+        &-header{
+           color: #fff;
+           background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 90%)
+        }
+    }
+    .vailLogin{ opacity: .3; visibility: visible; }
+}
+
+body.ems-login {
+    .mod-mini-login-header {
+        i.icon-ico_user:before {
+            color: $green;
+        }
+    }
+}
+
+body.ems-logoff.mini-login-ready{
+    overflow: hidden;
+    .mod-mini-login{
+        &-body{
+            .sub.logoff{
+                display: block;
+                -webkit-animation: loginAnim 1s;
+                animation: loginAnim 1s;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                background: $lGray;
+                width: 50%;
+                height: 100%;
+                border-bottom-left-radius: 0px;
+                .logoff-wrp {
+                    @include vAlign;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+                .ems-field {
+                    .ems-form-label {
+                        min-width: auto;
+                        width: 100%;
+                        color: $mDark;
+                        position: absolute;
+                        font-size: 10px;
+                        padding-left: 12px;
+                        top: 5px;
+                        line-height: 15px;
+                    }
+                    &-user {
+                        /*&:before {
+                            content: "\e933";
+                            font-family: 'icomoon';
+                            font-size: 25px;
+                            color: #000;
+                            position: absolute;
+                            top: 12px;
+                            right: 18px;
+                        }*/
+                    }
+                    &-pass {
+                        /*&:before {
+                            content: "\e931";
+                            font-family: 'icomoon';
+                            font-size: 25px;
+                            color: #000;
+                            position: absolute;
+                            top: 12px;
+                            right: 18px;
+                        }*/
+                    }
+                }
+                .ems-form-obj {
+                    margin-left: auto;
+                }
+                .clsPp {
+                    float: left;
+                    padding: 7px;
+                    border-radius: 3px;
+                    i {
+                        color: #fff;
+                    }
+                    &:hover {
+                        background: $green;
+                    }
+                }
+            }
+            .logoff-img {
+                display: block;
+                -webkit-animation: loginAni 2s;
+                animation: loginAni 2s;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes loginAni {
+    0% {
+        transform: scale(1);
+        -webkit-filter: brightness(1);
+     }
+  
+    50% {
+        transform: scale(1.1);
+        -webkit-filter: brightness(1.8);
+    } 
+    100% {
+        transform: scale(1);
+        -webkit-filter: brightness(1);
+    }
+  }
+
+body.ems-login.mini-login-ready{
+    .mod-mini-login{
+        &-body{
+            .sub.login{
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-mini-login{
+        &-header{ display: none; }
+        &-body{
+            .sub{
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                background: #fff;
+                padding: 0;
+                .sub-title{
+                    font-size: 20px;
+                    color: #fff;
+                    font-size: 20px;
+                    background: $darkBlack;
+                    padding-top: 20px;
+                    margin-bottom: 20px
+                }
+                .ems-form{
+                    &-inner{
+                        padding: 0 50px 30px 50px;
+                        .ems-field{
+                            .ems-form-label{
+                                float: none;
+                                min-width: 100%;
+                                color: $darkBlack;
+                                font-family: $bold;
+                                font-size: 17px;
+                            }
+                            .ems-form-obj{
+                                margin-left: 0;
+                                input{ height: 50px; line-height: 38px; color: $darkBlack; }
+                            }
+                            .seperator span{
+                                font-size: 17px;
+                                color: $gray;
+                                font-family: $bold;
+                            }
+                            #lnkSifremiUnuttum span{
+                                color: $mGray;
+                                font-family: $bold;
+                                font-size: 17px;
+                            }
+                            &-free{
+                                span[id$="lbflnkUyeOlmak"]{
+                                    a.lnkUyeOlmak{
+                                        color: $gray;
+                                    }
+                                }
+                            }
+                            &-submit{
+                                a.btnKutuLogin, a.btnFacebookLoginKutu{
+                                    max-width: 100%;
+                                    padding-top: 18px;
+                                    padding-bottom: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.login{
+                    width: 100%; padding: 0;
+                }
+                &.logoff{
+                    .ems-form-inner{ padding-left: 20px; padding-right: 20px;}
+                }
+                .ems-user-info{
+                    position: relative;
+                    display: block;
+                    font-size: 17px;
+                    font-family: bold;
+                    padding: 26px 50px;
+                    background: $darkBlack;
+                    color: #fff;
+                    .member-account{display: none;}
+                    .mobile-user-popup-close{
+                        cursor: pointer;
+                        position: absolute;
+                        left: 8px;
+                        width: 40px;
+                        text-align: center;
+                        padding: 5px;
+                        top: 21px;
+                        height: 30px;
+                    }
+                }
+                .ems-user-pages{
+                    padding-top: 10px;
+                    > div * {
+                        color: $darkBlack;
+                        font-size: 17px;
+                        font-family: $bold;
+                    }
+                    > div {
+                        padding: 0 40px;
+                        a{
+                            display: block;
+                            padding-top: 21px;
+                            padding-bottom: 21px;
+                            border-top: 1px solid #ededed;
+                            text-transform: uppercase;
+                            &.btnKutuLogout{
+                                margin-bottom: 20px;
+                            }
+                        }
+                        &:first-child{
+                            a{ border: none;  }
+                        }
+                    }               
+                }
+            }
+        }
+    }
+
+}

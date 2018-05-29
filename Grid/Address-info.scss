@@ -1,0 +1,479 @@
+.ems-page {
+    &-member{
+        .ems-page-default-info{
+            .page-top-desc {
+                display: none;
+            }
+        }
+        .ems-page-default-address{
+            .page-top-desc, .same-address{ display:none; }
+            .ems-message-error{
+                &:empty{ display:none; }
+                &:before{
+                    display: none;
+                }
+            }
+            .ems-address-form{
+                position: relative;
+                .ems-message-error {
+                    span {
+                        margin-top: 50px;
+                        font-size: 28px;
+                        display: block !important;
+                        &:before {
+                            content: "\e917";
+                            font-family: 'icomoon';
+                            font-size: 70px;
+                            margin-bottom: 20px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .add-new-address {
+                position: absolute;
+                top: -60px;
+                right: 0;
+                &:empty{ display: none; }
+                .btnAdresEkle {
+                    padding:10px;
+                    width: auto;
+                    background: transparent;
+                    min-width: 175px;
+                    font-family: $sbold;
+                    margin: 0;
+                    span {
+                        color: #fff;
+                        font-size: 16px;
+                        text-transform: none;
+                        font-family: $m;
+                        @include transition (color .2s ease);
+                        &:before{display: none;}
+                        &:after {
+                            content: '\e91f';
+                            font-family: 'icomoon';
+                            float: left;
+                        }
+                        
+                    }
+                    &:hover {
+                        background: transparent;
+                        span {
+                            color: $green;
+                        }
+                    }
+                }
+            }
+            #validateTeslimat{
+                .ems-page-new-address{
+                    padding-top: 0;
+                    padding-left: 0;
+                    .page-top-title{
+                        padding-bottom: 0;
+                        > span{display:none;}
+                    }
+                }
+                .yMapCont {
+                    /*margin-bottom: 20px;*/
+                }
+            }
+        }
+
+        .ems-grid-address{
+            &:empty{display:none;}
+            .ems-grid-row {
+                border-bottom: 2px solid $gray !important;
+                margin: 0 !important;
+                width: 100% !important;
+                .col-1{
+                    width:65%;
+                    padding-left:0;
+                    padding-right:0;
+                }
+                .col-2{display:none;}
+                .col-3{
+                    width:20%;
+                    padding-left:0;
+                    padding-right:0;
+                    .item-2{
+                        @include flex();
+                        @include flexDirection(row-reverse);
+                        align-items: center;
+                    }
+                }
+                .ems-address-name {
+                    .address-name{
+                        font-family: $r;
+                        line-height: 20px;
+                        font-size: 16px;
+                        color: $aGray;
+                        margin-top: 5px;
+                    }
+                    .adresTip1, .adresTip2 {
+                        /*display: none;*/
+                        font-family: $m;
+                        font-size: 12px;
+                        color:$aGray;
+                    }
+                    .address-title{
+                        font-family: $sbold;
+                        font-size: 24px;
+                        color:#fff;
+                    }
+                }
+                .btnAdresListeGuncelle,
+                .btnAdresListeSil{
+                    &:hover{
+                        color: #020303;
+                    }
+                }
+                .btnAdresListeGuncelle {
+                    display: inline-block;
+                    padding: 10px 10px 10px 10px;
+                    i,i:before{font-size: 17px;}
+                    i:before{color: $aGray;}
+                }
+                .btnAdresListeSil {
+                    width: auto;
+                    padding: 10px 20px 10px 20px;
+                    display: inline-block;
+                    i:before{color: $aGray;}
+                }
+                &:last-child{
+                    border-bottom-width:0;
+                }
+            }
+        }
+        .ems-page-new-address{
+            padding: 0;
+            .ems-form-inner{
+                max-width: 360px;
+            }
+        }
+    }
+}
+
+.ems-page-new-address{
+    width: 100%;
+    padding: 0;
+    .page-top-title{
+        text-align: left;
+        padding-bottom: 30px;
+        a.btnDefault{
+            display: inline-block;
+            width: auto;
+            background: none !important;
+            margin-bottom: 20px;
+            &:before{
+                font-family:'icomoon';
+                content:'\e914';
+                font-size: 10px;
+                display: inline-block;
+                margin-right: 5px;
+                color: #fff;
+            }
+            span{
+                font-size: 15px;
+                color: #fff;
+                &:before{
+                    display: none;
+                }
+            }
+        }
+        span[id$="lbfUYA_ADRESEKLE"]{display: none; padding-top: 30px; font-family: $sbold; font-size: 25px;}
+    }
+
+    .page-top-desc{display: none;}
+
+    .addressWrp {
+        padding:50px 30px;
+        background: $lGray;
+        width: 100%;
+        border-radius: 0 0 2px 2px;
+        .sStylerMainWrp.sStylerWrp_select .sStylerWrp, input[type="text"], input[type="password"], input[type="tel"], input[type="file"], select, textarea, .dropdown > span {
+            background: $gray;
+            color: #fff;
+        }
+        .ems-form-full {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+    }
+
+    .ems-form{
+        &-inner{
+            max-width: 580px;
+            width: 100%;
+            margin: 0 auto;
+            .ems-field{
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 0;
+                &-double{
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 10px;
+                }
+                &.tcCheck{
+                    /*display: none;*/ 
+                    &.clearfix {
+                        margin-bottom: 20px;
+                        .ems-form-label {
+                            top:1px;
+                            padding-left: 25px;
+                        }
+                    }
+                }
+                &.adresTip{
+                    .ems-form-label {display: none;}
+                    .ems-form-obj{
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0;
+                        a{
+                            padding:15px;
+                            display: inline-block;
+                            color: #fff;
+                            border-radius: 2px 2px 0 0;
+                            width: 100%;
+                            font-size: 16px;
+                            font-family: $bold;
+                            &.emos_selected{
+                                color: $green;
+                                background: $lGray; 
+                            }
+                        }
+                    }
+                }
+                .ems-form-obj{
+                    margin-bottom: 20px;
+                    textarea{
+                        width: 100%;
+                        height: 100px;
+                        padding-top: 20px;
+                        line-height: 20px;
+                    }
+                }
+                &.frmLeft {
+                    width: 100%;
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+                &.frmRight {
+                    width: 100%;
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
+                &.button{
+                    .ems-form-obj{
+                        margin-bottom: 0;
+                        .btnAdresKaydet{
+                            display: block;
+                            /*max-width: 200px;*/
+                            margin-left: auto;
+                            margin-right: auto;
+                            background: $green;
+                            span {
+                                font-size: 16px;
+                            }
+                            &:hover {
+                                background: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kurumsalUyari {
+        font-size:13px;
+        line-height: 16px;
+        color: $Gray42;
+        display: none !important;
+        i {
+            margin-right: 5px;
+        } 
+    }
+    &.lnkAdrTip_1 {
+        .tcCheck {
+            display: none;
+        }
+    }
+    &.lnkAdrTip_2 {
+        .vergNoCheck, .vergCheck {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-address {
+                .ems-grid-row {
+                    border-bottom: 1px solid $lGray !important;
+                    position: relative !important;
+                    width: 100% !important; 
+                    padding: 30px 0 !important;
+                    > div {
+                        height: auto !important;
+                        border: 0 !important;
+                    }
+                    width: 100% !important;
+                    .col-1, .col-2{
+                        width:100%; 
+                        height: auto !important;
+                        display: table-cell !important;
+                    }
+                    .col-2{line-height: 18px;}
+                    .col-3 {
+                        opacity: 1;
+                        bottom: auto;
+                        top: 30px;
+                        max-width: none;
+                        text-align: right;
+                        position: absolute !important;
+                        right: 0px; 
+                        padding-right: 15px !important;
+                        width: auto;
+                        height: auto !important;
+                        a.btnAdresListeSil {
+                            padding: 0;
+                            span span {
+                                display: inline-block;
+                                font-family: $regular;
+                                text-transform: none;
+                                text-decoration: underline;
+                                font-size: 12px;
+                                color: $aGray;
+                            }
+                            i {
+                                /*display: none;*/
+                            }
+                        }
+                        a.btnAdresListeGuncelle {
+                            padding: 0;
+                            margin-right: 20px;
+                            width: auto;
+                            span {
+                                display: inline-block;
+                                font-family: $regular;
+                                text-transform: none;
+                                text-decoration: underline;
+                                font-size: 12px;
+                                color: $aGray;
+                            }
+                            i {
+                                /*display: none;*/
+                            }
+                        }
+                    }
+                    .col-4{
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        @include setTransform(translateY(-50%));
+                        padding-right: 10px;
+                        width:5%;
+                        text-align: center;
+                        a {float: right;}
+                        .btnAdresListeGuncelle{margin-bottom: 20px;}
+                    }
+                    .ems-address-name {
+                        .address-title {
+                            float: left;
+                            padding-bottom: 5px;
+                            font-size: 18px;
+                        }
+                        .adresTip1, .adresTip2 {
+                            font-size: 12px;
+                            width: 100%;
+                            padding-right: 15px;
+                            float: left;
+                            margin: 0 0 10px 0;
+                            text-align: left;
+                            font-weight: normal;
+                        }
+                        .address-name {
+                            display: inline-block;
+                            width: 100%;
+                            text-align: left !important; 
+                        }
+                    }
+                    &:last-child {
+                        border: 0 !important
+                    }
+                }
+            }
+            .ems-page-default-address {
+                .add-new-address {
+                    position: fixed;
+                    top: auto;
+                    bottom: 0px;
+                    right: 0;
+                    width: 100%;
+                    text-align: center;
+                    .addressWrp {
+                        padding: 50px 20px;
+                    }
+                    a {
+                        width: 100% !important;
+                        padding: 17px 10px !important;
+                        background: $green !important;
+                        border-radius: 0 !important;
+                        span {
+                            font-family: $bold !important;
+                            color: #fff !important;
+                            text-transform: uppercase !important;
+                            letter-spacing: 1px;
+                        }
+                        &:hover {
+                            background: $blue !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ems-page-new-address{
+        margin: 0 !important;
+        .page-top-title{
+            display: block !important;
+            margin-top: 0px;
+        }
+        .page-top-desc{display: none;}
+        .addressWrp {
+            .ems-form-full {
+                .ems-form-obj {
+                    margin-bottom: 20px !important;
+                }
+            }
+        }
+        .ems-form{
+            &-inner{
+                .ems-field{
+                    &-double{width: 100%;}
+                    .ems-form-obj{
+                        max-width: 100%;
+                        input {
+                            background: $gray !important;
+                        }
+                    }
+                    &.button{
+                        .ems-form-obj{
+                            margin-left: 0;
+                            a.btnAdresKaydet{padding-top: 20px; padding-bottom: 20px;}
+                        }
+                    }
+                }
+            }
+        }
+        .kurumsalUyari {
+            .ems-form-obj {
+                margin-left: 0;
+            }
+        }
+    }
+}

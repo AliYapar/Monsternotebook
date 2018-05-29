@@ -1,0 +1,429 @@
+.urunCustomize {
+    table[id$="dtUrunDetay"] {
+        display: inline-block;
+        padding: 50px 0px 0px 0px;
+        background-image: radial-gradient(circle at 33% 32%, #474650, #15161a);
+        tbody, tr, td {display: block;}
+         td {
+            max-width: 1420px;
+            padding: 10px 20px 50px 20px;
+            width: 100%;
+            margin: 0 auto;
+            > div {
+                margin-left: 72%;
+                display: block;
+            }
+            .urunCustomize_tblUrunDetay {
+                margin-left: 72%;
+                display: block;
+                width: auto;
+                tr {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    &[id$="trSatisFiyatKdvsiz"] {
+                        display: none;
+                    }
+                    &[id$="trIndirimliFiyat"] {
+
+                    }
+                    &[id$="trSatisFiyat"] {
+                        
+                    }
+
+                    
+                    th {
+                       width: 100%; 
+                       text-align: left;
+                       font-family: $m;
+                       font-weight: normal;
+                       display: none;
+                    }
+                    td {
+                        width: 100%;
+                        padding: 0;
+                        text-align: left;
+                        font-family: $bold;
+                        font-weight: normal;
+                        .urunCustomize_indirimliFiyat {
+                            color: $aGray;
+                            font-size: 20px;
+                            font-family: $m;
+                            position: relative;
+                            &:before {
+                                content:'';
+                                height:1px;
+                                width: 100%;
+                                position:absolute;
+                                top:50%;
+                                left:0;
+                                display: block;
+                                background: $aGray;
+                                opacity:0.8;
+                            }
+                        }
+                        .urunCustomize_satisFiyat {
+                            font-size: 48px;
+                            text-align: left;
+                        }
+                        .urunDetay_satisFiyatKdvsiz {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+            .urunCustomize_resim {
+                float: left;
+                width: 66%;
+                margin: 0 0 50px 0;
+                a {
+                    width: 100%;
+                    display: inline-block;
+                    pointer-events: none;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .urunCustomize_urunAdi {
+                font-size: 45px;
+                font-family: $bold;
+                color: #fff;
+                margin: 0px 0 20px 72%;
+                line-height: 1;
+            }
+            .urunCustomize_lbfUrunKodu, .urunCustomize_lbfUrunAdi, .urunCustomize_lbfMarka, .urunCustomize_Marka, .urunCustomize_lbfKisaAciklama, .urunDetay_promosyon {
+                display: none;
+            }
+            .urunCustomize_urunKodu {
+                font-size: 30px;
+                color: #fff;
+                font-family: $bold;
+                line-height: 1;
+                margin-bottom: 20px;
+                display: none;
+            }
+            .urunCustomize_KisaAciklama {
+                font-size: 16px;
+                color: #fff;
+                font-family: $r;
+                line-height: 1.63;
+                margin-bottom: 30px;
+                ul {
+                    height: 156px;
+                    overflow: hidden; 
+                    li {
+                        &:before {
+                            content: '';
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 100%;
+                            background: #26df2e;
+                            display: inline-block;
+                            margin-right: 6px;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+                .customProp {
+                    font-size: 14px;
+                    color: $aGray;
+                    margin-top: 10px;
+                    display: block;
+                    &:before {
+                        content: '\e905';
+                        font-family: 'icomoon';
+                        margin-right: 10px;
+                        display: inline-block;
+                        font-size: 10px;
+                    }
+                }
+                &.opened {
+                    ul {
+                        height: auto;
+                        overflow: visible;
+                    }
+                    .customProp {
+                        &:before {
+                            content: '\e924';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tableCustomTable {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        margin: 0 auto;
+        .tableCustomTableIdTH {
+            padding: 20px;
+            .tableCustom_parametreTable {
+              padding: 20px;
+              border-radius: 5px;
+              tr {
+                  text-align: left;
+                  display: flex;
+                  margin-bottom: 20px;
+                  .tableCustom_parametreTableTHGRUPAD {
+                      font-size: 28px;
+                      font-family: $bold;
+                      background: $lGray;
+                      width: 100%;
+                      padding: 10px;
+                      border-radius: 5px;
+                  }
+                  .tableCustom_parametreTableTHRESIM {
+                      width: 70px;
+                      .tableCustom_Resim {
+                        width: 63px;
+                        margin-right: 20px;
+                      }
+                  }
+                  .tableCustom_parametreTableTDPARAM {
+                      font-family: $r;
+                      text-align: left;
+                      font-weight: normal;
+                      display: flex;
+                      align-items: center;
+                      strong {
+                        font-weight: normal;  
+                      }
+                      .sStylerWrp_radio {
+                          .rStyler  {
+                              width: 15px;
+                              height: 15px;
+                              border: 1px solid $aGray;
+                              display: inline-block;
+                              cursor: pointer;
+                              @include transition (all .2s ease);
+                              &.checked {
+                                  border-color: $green;
+                                  background: $green;
+                              }
+                          }
+                          input {
+                            opacity: 0;
+                            visibility: visible;
+                        }
+                      }
+                      .tableCustom_parametreler {
+                          margin: 5px 0;
+                          position: relative;
+                      }
+                  }
+              } 
+            } 
+        }
+        .tableCustomTableIdTD {
+            padding: 20px;
+            width: 400px;
+            .urunCustomize_divOzet {
+                background: #4a4e58;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+            .urunCustomize_lbfOzetBaslik {
+                font-size: 28px;
+                margin-bottom: 20px;
+                font-family: $bold;
+            }
+            .urunCustomize_lbfSecOzellikler {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid $green;
+                font-size: 18px;
+                font-family: $bold;
+            }
+            .urunCustomize_lbfOzellesti {
+                font-size: 18px;
+                font-family: $bold; 
+                margin-bottom: 20px;
+                display: none;
+            }
+            .urunCustomize_SecimIcerik {
+                margin-bottom: 20px;
+                ul {
+                    li {
+                        list-style: none;
+                        font-size: 14px;
+                        line-height: 25px;
+                        padding: 5px;
+                        border-radius: 2px;
+                        mix-blend-mode: color-dodge;
+                        span {
+                            /*color: #fff !important;*/
+                            color: inherit !important;
+                            mix-blend-mode: difference;
+                            &:before {
+                                content: '';
+                                width: 3px;
+                                height: 3px;
+                                border-radius: 100%;
+                                background: #26df2e;
+                                display: inline-block;
+                                margin-right: 6px;
+                                margin-bottom: 3px;
+                            }
+                        }
+                        &.selected {
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            .urunCustomize_total {
+                margin-bottom: 20px;
+                > div {
+                    font-family: $bold;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    width: 50%;
+                    float: left;
+                    &.urunCustomize_totalFiyat {
+                        font-size: 0;
+                        text-align: right;
+                        span {
+                            color: $green;
+                            font-size: 22px;
+                        }
+                    }
+                    &.urunCustomize_brutTotalFiyat {
+                        text-align: right;
+                        display: none;
+                    }
+                    &.urunCustomize_lbfBrutTotal {
+                        display:none;
+                    } 
+                }
+            }
+            .urunCustomize_btnSepeteAtDip {
+                table, tbody, tr, td, th {
+                    display: inline-block !important;
+                    width: 100%;
+                }
+            }
+        }
+        tr {
+            th {
+
+            }
+            td {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointSM){
+    .urunCustomize {
+        table[id$="dtUrunDetay"] {
+            padding: 0px;
+            td {
+                padding: 0px;
+                text-align: center !important;
+                > div {
+                    margin-left: 0 !important;
+                }
+                .urunCustomize_resim {
+                    width: 100%;
+                    position: static !important;
+                    margin: 0 0 40px 0 !important;
+                }
+                .urunCustomize_urunAdi {
+                    padding: 0 20px;
+                    font-size: 36px;
+                    text-align: center;
+                    margin: 0 0 10px 0 !important;
+                }
+                .urunCustomize_urunKodu {
+                    padding: 0 20px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                .urunCustomize_KisaAciklama {
+                    padding: 0 20px;
+                    font-size: 14px;
+                    color: $aGray;
+                }
+                .urunCustomize_tblUrunDetay {
+                    padding: 0 20px;
+                    margin-left: 0 !important;
+                    margin-bottom: 20px;
+                }
+                .urunCustomize_indirimliFiyat {
+                    font-size: 14px !important;
+                }
+                .urunCustomize_satisFiyat {
+                    font-size: 36px !important;
+                }
+            }
+        }
+        .tableCustomTable {
+            .tableCustomTableIdTH {
+                width: 100%;
+                display: inline-block;
+                .tableCustom_parametreTable {
+                    tr {
+                        margin-bottom: 2px;
+                        .tableCustom_parametreTableTHGRUPAD {
+                            font-size: 16px;
+                            cursor: pointer;
+                            .tableCustom_paramametreAdi {
+                                &:after {
+                                    content: '\e91f';
+                                    font-family: 'icomoon';
+                                    font-size: 9px;
+                                    color: #fff;
+                                    float: right;
+                                    padding: 6px;
+                                }
+                            }
+                        }
+                        &:nth-child(even) {
+                            display: none;
+                        }
+                        &.opened {
+                            display: flex;
+                            margin: 10px 0;
+                        }
+                        &.selected {
+                            .tableCustom_parametreTableTHGRUPAD {
+                                .tableCustom_paramametreAdi {
+                                    &:after {
+                                        content: '\e91a';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tableCustomTableIdTD {
+                width: 100%;
+                display: inline-block;
+                .urunCustomize_divOzet {
+                    position: static !important;
+                    width: 100%;
+                    .urunCustomize_btnSepeteAtDip {
+                        position: fixed;
+                        bottom:0;
+                        left: 0;
+                        width: 100%;
+                        a {
+                            border-radius: 0;
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                            padding: 17px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

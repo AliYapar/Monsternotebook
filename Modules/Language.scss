@@ -1,0 +1,145 @@
+.mod-lang {
+    position: relative;
+    border-left:1px solid $gray;
+    &-header, &-footer{
+        display: none;
+    }
+    .dropdown{
+        @include transition (background-color .2s ease);
+        > span{
+            cursor: pointer;
+            background: none;
+            letter-spacing: .9px;
+            font-family: $bold;
+            color: $lDark;
+            font-size: 13px;
+            border: none;
+            padding: 13px 20px;
+            line-height: inherit;
+            height: inherit;
+            display: inline-block;
+            height: 50px;
+            b, img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            i:before {
+                font-size: 9px;
+                margin-left: 20px;
+                position: relative;
+                top: -5px;
+                color: #fff;
+            }
+            &.mobile-title {
+                &:before {
+                    content:'\e927';
+                    font-family: 'icomoon';
+                    color: #fff;
+                    font-size: 22px;
+                    display: inline-block;
+                }
+                img {display: none;}
+            }
+
+        }
+        &.opened{
+            background: $lGray;
+            .sub{
+                display: block;
+                background: $lGray;
+                border-bottom-right-radius: 2px;
+                width: 160px;
+            }
+            > span i {
+                &:before {
+                    content:'\e924';
+                }
+            }
+        }
+        &:hover {
+            background: $lGray;
+            > span {
+                color: #000;
+                i {
+                }
+            }
+        }
+        &.opened {
+            .mobile-title {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 90%)
+            }
+        }
+    }
+    .sub{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        z-index: 10;
+        background: $rgbBg;
+        width: 100%;
+        padding: 5px 10px;
+        li{
+            a{
+                display: block;
+                padding: 10px 10px;
+                span{
+                    display: block;
+                    img{display: inline-block; margin-right: 15px; }
+                    b{
+                        display: inline-block !important;
+                        color: #fff;
+                        font-family: $sbold;
+                        font-size: 15px;
+                        font-weight: normal;
+                        position: relative;
+                        top: -3px;
+                        @include transition (all .2s ease);
+                    }
+                    &#multiIcon-en-US {
+                        b:before {
+                            content:'ENGLISH';
+                            display: inline-block;
+                        }
+                    }
+                    &#multiIcon-tr-TR {
+                        b:before {
+                            content:'TURKISH';
+                            display: inline-block;
+                        }
+                    }
+                    &#multiIcon-ru-RU {
+                        b:before {
+                            content:'РУССКИЙ';
+                            display: inline-block;
+                        }
+                    }
+                    &#multiIcon-ar-AE {
+                        b:before {
+                            content:'ARABIC';
+                            display: inline-block; 
+                        }
+                    }
+                }
+                &:hover {
+                    span {
+                        b {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+            &:first-child{
+                a{ border: none; }
+            }
+            &.selected {
+                a {
+                    span {
+                        b {
+                            color: $orange !important;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
