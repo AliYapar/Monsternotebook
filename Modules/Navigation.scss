@@ -322,6 +322,11 @@
                     padding-right: 0;
                     padding-left: 16px;
                     word-break: break-word;
+                    h1 {
+                        margin: 5px 0;
+                        display: block;
+                        line-height: 18px;
+                    }
                     &:after{display: none;}
                     &:before{
                         font-family: 'icomoon';
@@ -332,9 +337,9 @@
                         font-weight: normal;
                         color: $aGray;
                         position: absolute;
-                        top: 50%;
+                        top: 18px;
                         left: 0;
-                        margin-top: -14px;
+                        /*margin-top: -14px;*/
                         margin-right: inherit;
                     }
                     &:first-child{
@@ -346,6 +351,7 @@
                     &:nth-child(3){ margin-left:50px; }
                     &:nth-child(4){ margin-left:75px; }
                     &:nth-child(5){ margin-left:100px; }
+                    &:nth-child(6){ margin-left:125px; }
                 }
             }
         }

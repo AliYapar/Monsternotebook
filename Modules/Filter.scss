@@ -1,5 +1,13 @@
 .kutuOzellikFiltre{
-    .kutuHeaderDefault, .kutuFooterDefault, .urunKiyaslamaOzellik_temizle { display: none; }
+    .kutuFooterDefault, .urunKiyaslamaOzellik_temizle { display: none; }
+    .kutuHeaderOzellikFiltre {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: $sbold;
+        border-bottom: 1px solid #474650;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
     .urunKiyaslamaOzellik_ozellik{
         .urunKiyaslamaOzellik_ozellikAd{
             cursor: pointer;
@@ -347,6 +355,11 @@
 
 @media screen and (max-width: $breakpointXSM){
 
+    .kutuHeaderOzellikFiltre {
+        padding: 18px 30px;
+        margin-bottom: 0 !important;
+        font-size: 18px !important;
+    }
     .kutuOzellikFiltre {
         .urunKiyaslamaOzellik_ozellik {
             .urunKiyaslamaOzellik_ozellikIcerik {

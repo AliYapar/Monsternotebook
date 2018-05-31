@@ -1945,8 +1945,26 @@ body.suggestions-popup-ready{
                             font-family: $bold;
                         }
                     }
+                    .tmLpt {
+                        display: block;
+                        text-align: center;
+                        font-family: $sbold;
+                        height: 0;
+                        overflow:hidden;
+                        opacity: 0;
+                        @include transition (all .2s ease);
+                    }
                     &:hover {
                         background: #fb538c;
+                        .tmLpt {
+                            opacity: 1;
+                            border: 1px solid #fff;
+                            border-radius: 3px;
+                            padding: 6px;
+                            margin-top: 10px;
+                            height: 40px;
+                            overflow:visible;
+                        }
                     }
                 }
             }
