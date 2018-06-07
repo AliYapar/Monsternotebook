@@ -25,9 +25,9 @@
                         display: none;
                     }
                     &[id$="trIndirimliFiyat"] {
-
+                        display: none;
                     }
-                    &[id$="trSatisFiyat"] {
+                    &[id$="trSatisIlkFiyat"] {
                         
                     }
 
@@ -45,7 +45,7 @@
                         text-align: left;
                         font-family: $bold;
                         font-weight: normal;
-                        .urunCustomize_indirimliFiyat {
+                        .urunCustomize_satisIlkFiyat {
                             color: $aGray;
                             font-size: 20px;
                             font-family: $m;
@@ -76,13 +76,32 @@
                 float: left;
                 width: 66%;
                 margin: 0 0 50px 0;
-                a {
+                /*a {
                     width: 100%;
                     display: inline-block;
                     pointer-events: none;
                     img {
                         width: 100%;
                     }
+                }*/
+                > a,  > span {display: none;} 
+                
+                .swiper-container-detail {
+                    padding: 0 60px;
+                    .swiper-inner {
+                        margin:0;
+                        overflow: hidden;
+                        margin: 20px 0 10px 0; 
+                        .swiper-title {
+                            display: none; 
+                        }
+                    }
+                }
+                .product-detail-slider .swiper-button-next, .product-detail-slider .swiper-container-rtl .swiper-button-prev {right: 0;}
+                .product-detail-slider .swiper-button-prev, .product-detail-slider .swiper-container-rtl .swiper-button-next {left: 0;}
+                &:hover {
+                    .product-detail-slider .swiper-button-next, .product-detail-slider .swiper-container-rtl .swiper-button-prev {opacity: 1;}
+                    .product-detail-slider .swiper-button-prev, .product-detail-slider .swiper-container-rtl .swiper-button-next {opacity: 1;}
                 }
             }
             .urunCustomize_urunAdi {
@@ -194,6 +213,7 @@
                           .rStyler  {
                               width: 15px;
                               height: 15px;
+                              margin-right: 15px;
                               border: 1px solid $aGray;
                               display: inline-block;
                               cursor: pointer;
@@ -205,7 +225,11 @@
                           }
                           input {
                             opacity: 0;
-                            visibility: visible;
+                            /*visibility: visible;*/
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            cursor: pointer;
                         }
                       }
                       .tableCustom_parametreler {
@@ -251,7 +275,7 @@
                         list-style: none;
                         font-size: 14px;
                         line-height: 25px;
-                        padding: 5px;
+                        padding: 0 5px;
                         border-radius: 2px;
                         mix-blend-mode: color-dodge;
                         span {
@@ -319,6 +343,7 @@
         }
     }
 }
+.customizeZoom {display: none;}
 
 @media screen and (max-width: $breakpointSM){
     .urunCustomize {
@@ -333,7 +358,7 @@
                 .urunCustomize_resim {
                     width: 100%;
                     position: static !important;
-                    margin: 0 0 40px 0 !important;
+                    margin: 20px 0 40px 0 !important; 
                 }
                 .urunCustomize_urunAdi {
                     padding: 0 20px;

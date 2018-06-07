@@ -947,7 +947,7 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
 
 .ems-cart-ntf {
     &-wrapper {
-        background-image: linear-gradient(to left, #61b1fa, #1c80f7);
+        background:$blue;
         border-radius: 5px;
         padding: 15px;
         margin-bottom: 30px;
@@ -3030,6 +3030,7 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
         &-wrapper {
             padding: 10px;
             border-radius: 0;
+            margin: 0;
         }
     }
 }

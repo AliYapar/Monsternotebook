@@ -1,6 +1,7 @@
 .mod-lang {
     position: relative;
     border-left:1px solid $gray;
+    display: none !important;
     &-header, &-footer{
         display: none;
     }
