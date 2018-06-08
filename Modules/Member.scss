@@ -548,6 +548,29 @@
                } 
             } 
         }
+        .oldVideoLink {
+            text-align: center;
+            margin-bottom: 20px;
+            a {
+                font-family: $sbold;
+                font-size: 20px;
+                color: $green;
+                text-transform: uppercase;
+                text-align: center;
+                &:before {
+                    content: '\e900';
+                    font-family: 'icomoon';
+                    font-size: 15px;
+                    background: $green;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                    padding: 7px 10px;
+                    color: #fff;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
     }
 }
 

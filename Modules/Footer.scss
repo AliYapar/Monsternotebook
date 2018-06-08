@@ -57,7 +57,7 @@
     &-menu{
         ul{
             display: inline-block;
-            width: 14%;
+            width: 16%;
             vertical-align: top;
             /*padding: 0 0 0 20px;*/
             li{
@@ -112,8 +112,8 @@
                 }
             }
             &.footerRight {
-                width:16%;
-                max-width: 205px;
+                width:20%;
+                max-width: 220px;
                 float: right;
                 .footerContact {
                     display: block;
@@ -177,6 +177,9 @@
                         }
                     }
                 }
+            }
+            &.mobile-element {
+                display: none !important;
             }
         }
     }
@@ -619,6 +622,9 @@
                             }
                         }
                     }
+                    &.destop-element {
+                        display: none !important;
+                    }
                 }
                 &.selected {
                    position: absolute; 
@@ -642,6 +648,9 @@
                                float: right; 
                                display: inline-block;
                                cursor: pointer;
+                           }
+                           &.destop-element {
+                            display: none !important;
                            }
                        }
                        &.title {
@@ -676,6 +685,9 @@
                             display: none;
                         }
                     }
+                }
+                &.mobile-element {
+                    display: block !important;
                 }
             }
         }
@@ -726,7 +738,7 @@
     }
     .kutuBulten {
         padding: 10px 10px 15px 10px;
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     

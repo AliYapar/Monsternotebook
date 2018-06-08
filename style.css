@@ -13871,7 +13871,7 @@ span[id$="lbfUyeKartBilgi"] {
 
 .site-footer-menu ul {
   display: inline-block;
-  width: 14%;
+  width: 16%;
   vertical-align: top;
   /*padding: 0 0 0 20px;*/ }
   .site-footer-menu ul li > * {
@@ -13920,8 +13920,8 @@ span[id$="lbfUyeKartBilgi"] {
       -webkit-transition: all 0.5s ease;
       -o-transition: all 0.5s ease; }
   .site-footer-menu ul.footerRight {
-    width: 16%;
-    max-width: 205px;
+    width: 20%;
+    max-width: 220px;
     float: right; }
     .site-footer-menu ul.footerRight .footerContact {
       display: block; }
@@ -13970,6 +13970,8 @@ span[id$="lbfUyeKartBilgi"] {
         .site-footer-menu ul.footerRight .footerTel a i {
           font-family: 25px;
           margin-right: 10px; }
+  .site-footer-menu ul.mobile-element {
+    display: none !important; }
 
 .site-footer-social > ul {
   display: -webkit-box;
@@ -14337,6 +14339,8 @@ span[id$="lbfUyeKartBilgi"] {
               pointer-events: auto; }
               .site-footer-menu ul li.title a:before {
                 display: block; }
+          .site-footer-menu ul li.destop-element {
+            display: none !important; }
         .site-footer-menu ul.selected {
           position: absolute;
           background: #000;
@@ -14359,6 +14363,8 @@ span[id$="lbfUyeKartBilgi"] {
                 float: right;
                 display: inline-block;
                 cursor: pointer; }
+              .site-footer-menu ul.selected li.ksSite.destop-element {
+                display: none !important; }
             .site-footer-menu ul.selected li.title a {
               padding: 0 0 0px 0;
               margin-bottom: 20px; }
@@ -14380,6 +14386,8 @@ span[id$="lbfUyeKartBilgi"] {
                   display: inline-block; }
             .site-footer-menu ul.footerRight li .footerTel {
               display: none; }
+        .site-footer-menu ul.mobile-element {
+          display: block !important; }
     .site-footer-slogan {
       padding-bottom: 45px; }
     .site-footer-top {
@@ -14412,7 +14420,7 @@ span[id$="lbfUyeKartBilgi"] {
         width: 100%; }
   .kutuBulten {
     padding: 10px 10px 15px 10px;
-    margin-top: 30px; }
+    margin-top: 10px; }
   .scrTop {
     width: 100%;
     display: block; }
@@ -18742,6 +18750,27 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
       width: 100% !important;
       max-width: none;
       padding: 0; }
+
+.ems-page-video .oldVideoLink {
+  text-align: center;
+  margin-bottom: 20px; }
+  .ems-page-video .oldVideoLink a {
+    font-family: "sbold";
+    font-size: 20px;
+    color: #26df2e;
+    text-transform: uppercase;
+    text-align: center; }
+    .ems-page-video .oldVideoLink a:before {
+      content: '\e900';
+      font-family: 'icomoon';
+      font-size: 15px;
+      background: #26df2e;
+      margin-right: 10px;
+      border-radius: 3px;
+      padding: 7px 10px;
+      color: #fff;
+      position: relative;
+      top: -2px; }
 
 .suruculer {
   border: 1px solid #15161a; }
@@ -25463,7 +25492,7 @@ ul.emosInfinite .ems-prd {
   ul.emosInfinite .ems-prd .ems-prd-detail-link a {
     width: 100%;
     height: 0;
-    background: #3376ff;
+    background: #26df2e;
     display: block;
     text-align: center;
     overflow: hidden;
@@ -25478,13 +25507,14 @@ ul.emosInfinite .ems-prd {
       line-height: normal; }
     ul.emosInfinite .ems-prd .ems-prd-detail-link a.btnStokHaberci {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      background: #fc0f5f; }
 
 ul.emosInfinite .ems-prd:hover {
   position: relative;
   z-index: 2; }
   ul.emosInfinite .ems-prd:hover .ems-prd-inner {
-    border: 2px solid #3376ff;
+    border: 2px solid #26df2e;
     border-radius: 2px;
     margin-bottom: -48px !important; }
     ul.emosInfinite .ems-prd:hover .ems-prd-inner .ems-prd-detail-link a {

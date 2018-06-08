@@ -1316,7 +1316,7 @@ ul.emosInfinite {
             a {
                 width: 100%;
                 height: 0;
-                background: $blue;
+                background: $green;
                 display: block;
                 text-align: center;
                 overflow: hidden;
@@ -1331,8 +1331,9 @@ ul.emosInfinite {
                     line-height: normal;
                 }
                 &.btnStokHaberci {
-                    position: absolute;
+                    position: absolute; 
                     bottom: 0;
+                    background: $pink;
                 }
             }
         }
@@ -1341,7 +1342,7 @@ ul.emosInfinite {
         position: relative;
         z-index: 2;
         .ems-prd-inner {
-            border:2px solid $blue;
+            border:2px solid $green;
             border-radius: 2px;
             margin-bottom: -48px !important;
             .ems-prd-detail-link {
