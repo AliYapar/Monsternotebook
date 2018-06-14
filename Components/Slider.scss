@@ -296,6 +296,7 @@
         left: 0;
         margin: 0 auto;
         text-align: center;
+        display: none !important;
         .price-control{
             /*height: 40px;*/
             position: relative;
@@ -1007,6 +1008,25 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
     width: 100%;
     height: 100%;
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;*/
+}
+
+.mobileVer .swiper-zoom-container {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1124,7 +1144,7 @@ button.swiper-pagination-bullet {
                 bottom: 0px;
                 right: 0;
                 left: 0; 
-                height: 200px;
+                height: 60px;
             }
             .swiper-pagination {
                 bottom:10px;

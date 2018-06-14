@@ -12,6 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ico_change:before {
+  content: "\e92e";
+}
+.icon-ico_guarantee:before {
+  content: "\e92f";
+}
+.icon-ico_pixel:before {
+  content: "\e930";
+}
 .icon-ico_exclamation:before {
   content: "\e92c";
 }

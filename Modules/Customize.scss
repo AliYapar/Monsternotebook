@@ -246,14 +246,17 @@
             .urunCustomize_divOzet {
                 background: #4a4e58;
                 padding: 20px;
-                margin-bottom: 20px;
+                margin: 20px 0;
                 border-radius: 5px;
-                display: inline-block;
+                /*display: inline-block;*/
+                display: flex;
+                flex-direction: column;
             }
             .urunCustomize_lbfOzetBaslik {
                 font-size: 28px;
-                margin-bottom: 20px;
+                margin: 20px 0;
                 font-family: $bold;
+                order: 3;
             }
             .urunCustomize_lbfSecOzellikler {
                 margin-bottom: 10px;
@@ -261,6 +264,7 @@
                 border-bottom: 2px solid $green;
                 font-size: 18px;
                 font-family: $bold;
+                order: 4;
             }
             .urunCustomize_lbfOzellesti {
                 font-size: 18px;
@@ -270,6 +274,7 @@
             }
             .urunCustomize_SecimIcerik {
                 margin-bottom: 20px;
+                order: 5;
                 ul {
                     li {
                         list-style: none;
@@ -303,10 +308,11 @@
             }
             .urunCustomize_total {
                 margin-bottom: 20px;
+                order: 1;
                 > div {
                     font-family: $bold;
                     font-size: 16px;
-                    margin-bottom: 20px;
+                    /*margin-bottom: 20px;*/ 
                     width: 50%;
                     float: left;
                     &.urunCustomize_totalFiyat {
@@ -327,6 +333,7 @@
                 }
             }
             .urunCustomize_btnSepeteAtDip {
+                order: 2;
                 table, tbody, tr, td, th {
                     display: inline-block !important;
                     width: 100%;

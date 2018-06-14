@@ -2063,6 +2063,7 @@ body.suggestions-popup-ready{
         width: 100%;
         margin-top: 8px;
         .thumb-pager {
+            position: relative;
             .swiper-inner {
                 width: 100%;
                 overflow: hidden;
@@ -2104,10 +2105,32 @@ body.suggestions-popup-ready{
                     }
                 }
             }
+            .swiper-button-top {
+                position: absolute;
+                left: -35px;
+                top: 50%;
+                margin-top: -1%;
+                padding: 5px;
+                cursor: pointer;
+                i {
+                    font-size: 20px;
+                }
+            }
+            .swiper-button-bottom { 
+                position: absolute;
+                right: -35px;
+                top: 50%;
+                margin-top: -1%;
+                padding: 5px;
+                cursor: pointer;
+                i {
+                    font-size: 20px;
+                }
+            }
         }
         .paging-thumb {
             text-align: right;
-            color: $aGray;
+            color: $edGray;
             margin-top: 10px;
             .current {
                 &:after {

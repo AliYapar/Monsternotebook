@@ -1641,7 +1641,10 @@
             &.order-3{ order: 80; order:3;}
             &.order-8{ order: 90; }
         }
-    }    
+    } 
+    .ems-page-home .widget-view-auto {
+        margin-top: 0px;
+    }
 }
 
 

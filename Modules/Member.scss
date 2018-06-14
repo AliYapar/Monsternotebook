@@ -889,6 +889,26 @@
     }
 }
 
+.bankaHesabi {
+    table {
+        tr {
+            td {
+                padding: 5px;
+                word-wrap: break-word; 
+            }
+        }
+        tr:nth-child(1n) {
+            background: #44454a; 
+        }
+        tr:nth-child(2n) {
+            background: #6c7075; 
+        }
+        tr:nth-child(6n) {
+            background: none; 
+        }
+    }
+}
+
 @media screen and (max-width: 1200px){
     .ems-page-corporate {
         .referans {
