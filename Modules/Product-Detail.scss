@@ -19,48 +19,6 @@
             }
         }
     } 
-    /* Gift Cart */
-    &.spr4 {
-        .customize-product-container {
-            display: block !important;
-        }
-        .ems-prd-group {
-            .listeUrunDetayGrup_listeBaslik {
-                span {
-                    font-size: 0;
-                    &:before {
-                        content:'Gift Card Fiyat: ';
-                        font-size:14px;
-                    }
-                }
-            }
-        }
-        .ems-prd-zoom {
-            ul.slide-wrp {
-                li {
-                    &:first-child {
-                        display: none !important;
-                    }
-                }
-            }
-            .thumb-wrp {
-                .prdName {
-                    display: none;
-                }
-            }
-            .swiper-inner {
-               .prdName {
-                   font-size: 30px;
-                   color: #fff;
-                   position: absolute;
-                   left: 19%;
-                   bottom: 22%;
-                   z-index: 9;
-                   pointer-events: none;
-               } 
-            }
-        }
-    }
 }
 
 .swiper-container{
@@ -1975,14 +1933,6 @@ body.suggestions-popup-ready{
     display: none;
 }
 
-.en-US .ems-prd-detail .ems-prd-discount-rate, .ru-RU .ems-prd-detail .ems-prd-discount-rate, .en-US .ems-prd-detail .ems-prd-price-taksit, .ru-RU .ems-prd-detail .ems-prd-price-taksit {display: none;}
-.en-US .ems-prd-detail .ems-prd-price-kargo, .ru-RU .ems-prd-detail .ems-prd-price-kargo {float: left; margin: 5px 0 0 0px; text-align: left;}
-.en-US .ems-prd-detail .ems-prd-size .dropdown-trigger > span:before {content: 'Number ';}
-.ru-RU .ems-prd-detail .ems-prd-size .dropdown-trigger > span:before {content: 'ЧИСЛО ';}
-
-.en-US .ems-prd-detail .ems-prd-bundle .urunDetay_bagliUrun .secim .cStyler:before {content: 'SELECT ';}
-.ru-RU .ems-prd-detail .ems-prd-bundle .urunDetay_bagliUrun .secim .cStyler:before {content: 'ВЫБРАТЬ ';}
-
 
 /* POPUP ID */
 
@@ -2005,14 +1955,6 @@ body.suggestions-popup-ready{
         .jconfirm-closeIcon {
             top: 15px !important;
             right: 15px !important;
-        }
-        .jconfirm-content {
-            background:url(#{$baseHref + "/UPLOAD/popupGorsel/ayakkabi-id.jpg"}) center right no-repeat;
-            min-height: auto !important;
-            .content-inner {
-                width: 55%;
-                line-height: 22px;
-            }
         }
     }
 }

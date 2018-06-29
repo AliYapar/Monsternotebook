@@ -594,12 +594,6 @@
     }
 }
 
-.ru-RU {
-    .ems-prd-list-sort-desktop {
-        max-width: 280px;
-    }
-}
-
 .sort-popup-ready {
     .site-content {z-index: 15;}
     .ems-prd-list-sort-desktop {
@@ -1426,146 +1420,6 @@ ul.emosInfinite {
 
 .ems-prd{
     .ems-prd-group {display: none;}
-    .ems-prd-icons-alternate { 
-        &:before {
-            content:'';
-            font-family: 'icomoon';
-            font-size: 32px;
-            color: $orange;
-            display: inline-block;
-        }
-        &:after {
-            font-size: 12px;
-            display: block;
-            color: $orange;
-        }
-    }
-    &.amator {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'\e93d';
-            }
-            &:after {
-                content:'Amatör'
-            }
-        }
-    } 
-    &.yProf {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'\e941';
-            }
-            &:after {
-                content:'Yarı Prof'
-            }
-        }
-    } 
-    &.prof {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'\e940';
-            }
-            &:after {
-                content:'Prof'
-            }
-        }
-    } 
-    &.elit {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'\e93e';
-            }
-            &:after {
-                content:'Elit'
-            }
-        }
-    } 
-
-    &.goretex {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-goretex.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.gritex {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-gritex.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.spotex {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-spotex.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.sympatex {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-sympatex.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.water {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-water.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.waterRes {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-waterRes.png"}) repeat-x;
-            }
-        }
-    }
-
-    &.kaztuyu {
-        .ems-prd-icons-alternate { 
-            &:before {
-                content:'';
-                width: 45px;
-                height: 32px;
-                display: inline-block;
-                background:url(#{$baseHref + "/images/ozellikler/ico-kaztuyu.png"}) repeat-x;
-            }
-        }
-    }
-    
-
 } 
 
 
@@ -1706,11 +1560,6 @@ body.dortlu{
         }
     }
     .ems-prd-list{
-        &-count{
-            /*width: 100%;*/
-        }&-view{
-
-        }
         &-view{
             > span:before{
                 display: none;
@@ -2395,7 +2244,7 @@ body.dortlu{
     }
     .ems-cat-description {display: block;}
     .dortlu .ems-page-list > div .ems-col-right {
-        width:100%;
+        width:100%; 
     }
 }
 

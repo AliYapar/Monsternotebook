@@ -401,12 +401,6 @@
                                                     color: $pink;
                                                     padding: 0;
                                                     font-size: 12px;
-                                                    /*&:before {
-                                                        content: "\e921";
-                                                        font-family:'icomoon';
-                                                        font-size: 12px;
-                                                        color: $r;
-                                                    }*/
                                                 }
                                                 .urunKiyaslamaUrun_urnAd{
                                                     padding: 0 10px;
@@ -555,45 +549,6 @@
                         }
                 }
         }
-        /*.fixHolderInside.fixed{ 
-                .compareSlider{
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    z-index: 99;
-                    background: #fff;
-                    display: inline-block;
-                    vertical-align: top;
-                    border-bottom:1px solid $inputborder;
-                    border-top:1px solid $inputborder;
-                    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.17);
-                        .mask{
-                            max-width: $siteContainerWidth;
-                            margin: 0 auto;
-                                li{
-                                    margin-right: 0;
-                                    width: 33.33% !important;
-                                    border:none;
-                                        .urunKiyaslamaUrun{
-                                            display: inline-block;
-                                            width: 100%;
-                                                .urunKiyaslamaUrun_resim{
-                                                    float: left;
-                                                    width: 100px;
-                                                    border: 1px solid #fff;
-                                                }
-                                                .urunKiyaslamaUrun_urnAd{
-                                                    padding: 20px 20px 9px 120px;
-                                                }
-                                                .urunKiyaslamaUrun_fiyat{
-                                                    padding: 0px 20px 20px 120px;
-                                                }
-                                        }
-                                }
-                        }
-                }
-        }*/
 }
 
 /* Kıyaslama Sayfası */
@@ -694,12 +649,7 @@
 .comSpecfilter ul li.selected a{ }
 .specItem .specContent tr.hiddenElem, .specItem.hiddenElem{ display:none !important; }
 /**/
-/*
-.compareWrapper .fixHolderInside{ width:100%; max-width:1200px; display:inline-block; z-index:2; background:#FFF; }
-.compareWrapper .fixHolderInside.fixed {position:fixed;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun {padding: 0 25px;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun .urunKiyaslamaUrun_resim{ display:none; } 
-*/
+
 /*compare scrolltop*/
 .compareWrapper .fixHolderInside a.scrollTop{ display:none; }
 
