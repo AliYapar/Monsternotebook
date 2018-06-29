@@ -248,6 +248,17 @@
             float: left;
         }
         img {float:right;}
+        .cartLogo {
+            float:right;
+            position: relative;
+            a {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 15%;
+            }
+        }
         .site-footer-redirect {
             margin: 5px auto;
             display: inline-block;
@@ -442,6 +453,11 @@
     }
 }
 
+.fLogin, .fLogoff {display: none;}
+
+.ems-login .site-footer-menu ul li.fLogin {display: inline-block;}
+.ems-logoff .site-footer-menu ul li.fLogoff {display: inline-block;}
+
 /* Footer sosyal medya & mağazalar btn */
 
 .ems-footer-link {
@@ -528,6 +544,61 @@
             }
         }
         
+    }
+}
+
+span.scrolltop {
+    position: fixed;
+    width: 40px;
+    height: 40PX;
+    background: $lGray;
+    right: 15px;
+    bottom: 12px;
+    z-index: 100;
+    border-radius: 5px;
+    display: none;
+    transition: opacity ease .2s;
+    cursor: pointer;
+    opacity: 0;
+    &:hover {
+        background: #000;
+    }
+}
+span.scrolltop.scroll {
+    opacity: 1;
+}
+span.scrolltop::after {
+    width: 2px;
+    height: 40%;
+    background: white;
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    left: 14px;
+}
+span.scrolltop::before {
+    width: 2px;
+    height: 40%;
+    background: white;
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    left: 24px;
+}
+
+@media screen and (min-width: 1200px){
+    span.scrolltop {
+        display: block;
     }
 }
 
@@ -630,6 +701,9 @@
                     &.destop-element {
                         display: none !important;
                     }
+                    &.fLogoff, &.fLogin {
+                        display:none;
+                    }
                 }
                 &.selected {
                    position: absolute; 
@@ -640,9 +714,9 @@
                    height: 100%;
                    z-index: 1;
                    padding: 20px;
-                   display: inline-block !important;
+                   display: inline-block;
                    li {
-                       display: inline-block !important;
+                       display: inline-block;
                        width: 50%;
                        float: left;
                        &.ksSite {
@@ -663,6 +737,9 @@
                                 padding: 0 0 0px 0;
                                 margin-bottom: 20px;
                             }
+                        }
+                        &.fLogoff, &.fLogin {
+                            display:none;
                         }
                     }
                 }
@@ -727,6 +804,12 @@
             img {display: inline-block;} 
         }
     }
+
+    .ems-login .site-footer-menu ul li.fLogin {display: none;}
+    .ems-logoff .site-footer-menu ul li.fLogoff {display: none;}
+    
+    .ems-login .site-footer-menu ul.selected li.fLogin {display: inline-block;}
+    .ems-logoff .site-footer-menu ul.selected li.fLogoff {display: inline-block;}
 
     .footerBox {
         padding: 0;

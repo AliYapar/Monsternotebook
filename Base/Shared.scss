@@ -220,6 +220,8 @@ $left in (1, 0px, 0px),
 	&:empty{ display: none; }
 	&-success{
 		background:green;
+		padding: 10px !important;
+		color: #fff !important;
 	}
 	&-error{
 		/*margin-bottom: 20px;*/

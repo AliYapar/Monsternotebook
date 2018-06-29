@@ -2022,7 +2022,7 @@ body.suggestions-popup-ready{
 .product-detail-slider {
     .swiper-inner {
         width: 100%;
-        margin: 20px 0 10px 0;
+        margin: 20px 0 10px 0; 
         .swiper-title {
             h4 {
                 margin: 50px 0;
@@ -2148,6 +2148,68 @@ body.suggestions-popup-ready{
     }
 }
 
+// 360 gorsel
+
+.view-360 {
+        .btn-view-360 {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            z-index: 1;
+        i {
+            width:80px;
+            height:49px;
+            background: url(#{$baseHref + "/images/frontend/viewBtn.png"}) center center no-repeat;
+            display: inline-block;
+        }
+    }
+    &-active {
+        .ems-popup-360-container { 
+            display: block;
+            opacity: 1;
+            .threesixty {
+                height:100% ;
+                .spinner, .threesixty_images {display: none;}
+            } 
+        }
+    }
+}
+
+.popupTaksit {
+    display:none; 
+    padding: 10px 15px 60px 15px; 
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    .popupTitleTaksit span { 
+        font-size: 48px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        font-family: $sbold;
+        h3 {
+            margin: 20px 0; 
+        }
+    }
+    .gridTaksitBanka tr {
+        
+    }
+}
+
+.ems-sticky-tab-content .popupTaksit {
+    display: inline-block;
+}
+.ems-sticky-tab-content {
+    .yorumListe_main {
+        .tableYorumListe_uyeRating > span {
+            display: none;
+        }
+    }
+}
+
 .ems-prd-zoom {
     > span{
         display: inline-block;
@@ -2256,7 +2318,8 @@ body.suggestions-popup-ready{
             font-size: 20px;
             margin-top: 30px;
             margin-bottom: -30px;
-            display: inline-block;
+            /*display: inline-block;*/
+            display: none;
         }
     }
     .swiper-button-next {
@@ -2291,7 +2354,8 @@ body.suggestions-popup-ready{
             li {
                 padding: 0 10px;
                 opacity: 1;
-                pointer-events: auto;
+                pointer-events: auto; 
+                max-width: 180px;
                 /*max-width:180px;*/
                 .ems-video-thumb-video {
                     border:1px solid transparent;
@@ -2306,7 +2370,7 @@ body.suggestions-popup-ready{
                 }
                 &:hover {
                     .ems-video-thumb-video {
-                        border-color: $blue;
+                        border-color: $green; 
                     }
                 }
             }
@@ -2663,7 +2727,7 @@ body.suggestions-popup-ready{
 .ems-sticky-tab-header {
     display:flex;
     width:100%;
-    max-width:1230px;
+    max-width:1410px;
     padding:0 15px;
     margin:0 auto; 
     justify-content: space-between;
@@ -2781,16 +2845,35 @@ body.suggestions-popup-ready{
         &-detail{
             .swiper-pagination {
                 display: block;
-                bottom: 20px;
+                bottom: -60px;
                 margin: 0;
                 position: absolute;
                 width: 100% !important;
                 &-bullet{
                     border-color: $darkBlack;
-                    margin: 10px 7px 0 7px;
-                    display: none;
+                    margin: 5px 7px 0 7px !important;
+                    padding: 5px 0 !important; 
+                    /*display: none;*/
+                    &:before {
+                        font-size: 12px;
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        display: inline-block;
+                        background: $aGray;
+                        border-radius: 100%;
+                        @include transition (background .2s ease)
+                    }
                     &-active{
                         /*background: $darkBlack;*/
+                        &:before {
+                            background: #fff;
+                        }
+                    }
+                    &:hover {
+                        &:before {
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -2800,6 +2883,7 @@ body.suggestions-popup-ready{
     .product-detail-slider {
         .swiper-inner {
             width: 100%;
+            margin: 20px 0 70px 0;
         }
         ul {
             display: flex;
@@ -3455,7 +3539,7 @@ body.suggestions-popup-ready{
                     width:100%;
                     a {
                         border-radius:0;
-                        padding: 17px 0px !important;
+                        padding: 24px 0px 21px 0 !important;
                         span {
                             font-size: 16px;
                         }
@@ -3494,7 +3578,7 @@ body.suggestions-popup-ready{
                     padding:20px 15px 20px 15px;
                     /*margin-bottom:20px;*/
                     border-bottom:1px solid $lGray;
-                    .urunOzellik .urunOzellikTitle, .swiper-container .swiper-title, .urunOzellik .urunOzellikTitle, .ems-video-player .ems-video-player-title, .yorumListe_main .yorum-baslik {display: none;}
+                    .urunOzellik .urunOzellikTitle, .swiper-container .swiper-title, .urunOzellik .urunOzellikTitle, .ems-video-player .ems-video-player-title, .yorumListe_main .yorum-baslik, .popupTaksit .popupTitleTaksit {display: none;}
                     .urunOzellik {
                         margin: 0px auto 0px auto !important;
                     }
@@ -3505,6 +3589,11 @@ body.suggestions-popup-ready{
                         margin-top:20px;
                         .swiper-pagination {
                             position: static;
+                        }
+                    }
+                    .popupTaksit {
+                        .gridTaksitBanka tr {
+                            width: 50%;
                         }
                     }
                 } 
@@ -3745,6 +3834,11 @@ body.suggestions-popup-ready{
                     width: 80% !important;
                 }
             }
+        }
+    }
+    .popupTaksit { 
+        .gridTaksitBanka tr {
+            width: 100% !important;
         }
     }
 }

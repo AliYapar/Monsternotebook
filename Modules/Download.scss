@@ -1,0 +1,87 @@
+.ems-page-download {}
+.ems-page-download {
+    .pageDownload {
+        width: 100%;
+        max-width: 1230px;
+        margin: 15px auto 40px auto;
+    }
+}
+
+
+/**  Downloads Sayfasi  **/
+.DownloadArama {margin-top:10px;}
+.tableDownload {COLOR: #fff; width: 100%;}
+.tableDownload a {font-size:14px; color:#484848; text-decoration:none;}
+.tableDownload a:hover {font-size:14px; color:#484848; text-decoration:none;}
+.tableTitleDownload {}
+.tableTitleDownload th {height:50px; text-align:left; padding-left:10px;}
+.tableTitleDownload td {text-align:right;}
+.tableTitleDownload td a {background: none !important;}
+.tableTitleDownload td a span {color: $green !important;}
+
+
+.tableDownload_trTitle {background: #000; line-height: 30px; color:#ffffff; font-size:13px;}
+.tableDownload_tdLeftTitle {width:36%; text-align:center;}
+.tableDownload_tdRightTitle {width:36%; text-align:center;}
+
+.tableDownload_tdImageDownload {text-align:center; vertical-align:middle; background: $aGray; padding: 10px; color: $gray;}
+.tableDownload_tdImageDownload #productImage span {font-family: $sbold; color: $gray; margin: 0 0 10px 0; display: block;}
+.tableDownload_tdImageDownload table {margin: 0 auto 10px auto; width: 100% !important;}
+.tableDownload_trBody {padding: 1px; vertical-align: top;}
+.tableDownload_trBody a {display:block;}
+
+.downloadSelected {background: #bababa; color:$gray;}
+.downloadBodyDiv {height:240px; overflow:auto; text-align: center; padding:20px; background: $lGray;}
+.downloadBodyDiv a {color: #fff !important; font-size: 14px}
+#downloadLeftBody a {color: #fff !important; font-size: 14px !important; padding: 10px;}
+.tableDownload_tdRightBody {border-left: 1px solid $gray;}
+#downloadByProd {margin-top:70px; margin-left:10px; margin-right:10px; font-size:14px; color: #fff; border: 1px solid $aGray; padding: 10px 10px; border-radius: 3px; display: inline-block;}
+#downloadByProd:hover {border-color:$green; background: $green;}
+#downloadByCate {margin-top:50px; margin-left:10px; margin-right:10px; font-size:14px;display:none;}
+#downloadNavigasyon a{ color:#FFFFFF;}
+
+.tableDownload_lbfUrnKod {margin-top:30px; display: block; text-align: left;}
+.tableDownload_txtUrnKod {float:left; margin-top:20px; width: 70%;}
+.tableDownload_txtUrnKod input {color:#fff;}
+.tableDownload_btnDwnAra {float:left; margin-top:22px; padding-left:15px; width: 30%;}
+.tableDownload_btnDwnAra table, .tableDownload_btnDwnAra tbody, .tableDownload_btnDwnAra tr, .tableDownload_btnDwnAra th {display: block;}
+.tableDownload_btnDwnAra a {display:inherit; width: 100% !important; color: #fff !important; padding: 15px 10px;}
+.tableDownload_lbfUrunKoduDesc {clear:none; margin-top:120px; text-align:center; display:none;}
+
+.tableDownload_lbfUrnOnay {margin-left:0px; font-size:13px;}
+.tableDownload_lbfUrnOnay span {font-family: $sbold; font-size: 14px;}
+.tableDownload_lbfUrnOnay a{  font-size:13px; color:#484848;}
+.tableDownload_lbfUrnKoduBaslik {margin:10px 0; padding: 5px 0; background-color:#151515; text-indent:3px;}
+.tableDownload_lbfUrnKoduBaslik span {color:#ffffff;}
+.tableDownload_lbfUrnKodu {}
+.tableDownload_lbfUrnAdiBaslik {margin:10px 0; padding: 5px 0; background-color:#151515; text-indent:3px;}
+.tableDownload_lbfUrnAdiBaslik span{color:#ffffff;}
+.tableDownload_lbfUrnAdi {}
+.tableDownload_lbfbtnDwnOnayla {margin-top:10px; text-align:center;}
+.tableDownload_lbfbtnDwnOnayla a { font-size:13px; color:#484848;}
+.tableDownload_lbfbtnDwnOnayla a:hover { font-size:13px; color:#484848;}
+.DownloadIcerik .tableUrunDokuman {width:100%; margin-top:20px; margin-bottom:20px;}
+.DownloadIcerik .urunDetay_urunDokumanTuru {text-align:left;}
+.DownloadIcerik .urunDetay_urunDokuman {text-align:left;}
+.pageHeaderDownload{font-size: 48px; margin: 30px 0; position: relative; font-family: $sbold; text-align: center;}
+.download-doc {margin: 0;}
+
+.urunDetay_urunDokumanTuru{ background-color:#151515; color:White; font-size:13px; font-family: $sbold; text-indent:5px; line-height:30px;}
+.tableUrunDokuman { /*width:940px !important;*/ padding-bottom:30px;}
+.urunDetay_urunDokuman{ border:solid 1px #2e373a; text-indent:10px; font-size:13px; padding: 5px;}
+.urunDetay_urunDokuman a:hover {text-decoration:none; font-size:13px; color:#7c7c7c;}
+
+.lbfbtnDwnYeni span{ color:#ffffff;}
+
+@media screen and (max-width: 980px) {
+    .tableTitleDownload {
+        th {display: none;}
+        td {text-align: center;
+            th {display: block;}
+        }
+    }
+    .tableDownload_trBody td {border: 0; border-top: 1px solid $gray;}
+    .tableDownload_trTitle {display: none;}
+    .tableDownload_trBody td {display: block; width: 100%;}
+    .tableDownload_tdImageDownload td {width: 25%; float: left;} 
+}

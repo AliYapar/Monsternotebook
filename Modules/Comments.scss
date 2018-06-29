@@ -691,6 +691,17 @@
     .swiper-button-prev, .swiper-button-prevs, .swiper-button-next, .swiper-button-nexts {
         margin-top: 20px !important;
     }
+
+    .tableYorumListe_uyeRating{
+        > span{ 
+            &:before{
+                content:'';  
+            }
+            &:after{
+                content:'';
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $breakpointXSM){

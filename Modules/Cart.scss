@@ -1368,7 +1368,7 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
                         text-align: center; 
                         cursor:pointer;
                         &:hover {
-                            border: 1px solid #0262b7;
+                            border: 1px solid $green;
                             z-index: 1;
                         }
                         > img {margin: 0 auto; max-width: 80px;}
@@ -2276,7 +2276,7 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
     margin: 0;
     padding: 0 15px;
     height: calc(100vh);
-    background: url(#{$baseHref + "/images/frontend/check.jpg"}) top center no-repeat;
+    background: url(#{$baseHref + "/images/frontend/tesekkurler-sayfasi.png"}) top center no-repeat;
     background-size: cover;
     .sonucTitle {
         font-family: $sbold;
@@ -2330,8 +2330,23 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
     }
     .pageDescSiparisSonucErr {
         padding-bottom: 0px;
+        color: #fff;
         .sonucTitle {
             font-size: 36px;
+        }
+        .pageSiparisSonuc_lbfOdemeAlinamadi {
+            font-size: 36px;
+            font-family: $sbold;
+            margin: 20px 0 20px 0;
+            .approvedHeader {
+                margin-bottom: 20px !important;
+                text-align: left;
+            }
+        }
+        span[id$="lbfSIP_DEFAULTERROR"] {
+            line-height: 25px;
+            margin-bottom: 30px;
+            display: block;
         }
     }
     .approvedHeader {
@@ -2340,7 +2355,7 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
         display: inline-block;
         margin-bottom: 150px;
         padding: 25px;
-        background: $lGray;
+        /*background: $lGray;*/
         &.apprError {
             img {
                 float: left;
@@ -2365,6 +2380,24 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
         &.apprCheck {
     
         }
+    }
+}
+.sipSonucHata {
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    h5 {
+        font-size: 25px;
+        margin: 0 0 20px 0;
+    }
+    h4 {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+    }
+    span {font-family: $sbold; margin-bottom: 10px; display: block; font-size: 16px;}
+    ul {
+        margin-bottom: 10px;
     }
 }
 .pnlDipToplamTable {
@@ -3253,6 +3286,8 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
     }
     .pageSiparisSonuc {
         background: $gray;
+        height: auto !important;
+        padding: 30px 15px !important;
     }
     .basketNotice {
         padding: 0 20px;

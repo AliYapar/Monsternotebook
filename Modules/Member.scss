@@ -575,9 +575,17 @@
 }
 
 .suruculer {
-    border: 1px solid #15161a;
+    color: #000 !important;
+    background: #fff;
     td {
         padding: 0 5px;
+    }
+    tr:first-child {
+        td {
+            a {
+                font-family: $sbold;
+            }
+        }
     }
 }
 
@@ -725,11 +733,24 @@
     }
 }
 
+.ems-page-default-password {
+    .pageErrorUyeSifre {
+        margin: 15px 0;
+    }
+}
+
 .pageSifremiUnuttum{
     max-width: 960px;
     padding: 40px 0 40px 60px;
+    .pageHeaderSifremiUnuttum {
+        font-size: 24px;
+    }
     .pageErrorDefault, .pageSifremiUnuttum_mesaj{
         margin:15px 0;
+    }
+    .pageDescSifremiUnuttum {
+        color: #fff;
+        font-size: 14px;
     }
     .tableSifremiUnuttum{
         max-width: 365px;
