@@ -158,7 +158,9 @@
     }
     .ems-page-404 .col1 {
         width: 100%;
-        background: $gray;
+        background: url(#{$baseHref + "/images/frontend/404-mobil.png"}) top center/contain no-repeat;
+        background-attachment: fixed;
+        height: calc(100vh); 
         .foundText {
             margin-top:10px !important;
             h4 {

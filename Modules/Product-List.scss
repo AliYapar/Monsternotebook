@@ -131,7 +131,7 @@
             z-index: 2;
             padding: 0 20px;
             h1 {
-                font-size: 48px;
+                font-size: 48px; 
                 margin: 0 0 20px 0;
                 padding: 0;
                 color: #fff;
@@ -141,6 +141,8 @@
                 -webkit-box-orient: vertical;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                font-weight: normal;
+                font-family: $sbold;
             }
             > span {
                 max-width: 800px;
@@ -351,10 +353,15 @@
         }
     }
     &-count{
-        width: 150px;
         float: left;
-        display: none;
-        > span{ display: none; }
+        display: block;
+        padding: 0 8px;
+        > span{ 
+            display: block;
+            &:empty {
+                display: none;
+            }
+        }
         .urunKiyaslamaOzellik_UrunSayi{
             font-size: 15px;
             padding: 5px 5px 5px 20px;
@@ -366,15 +373,22 @@
                 content:')';
             }
         }
+        .aramaKelime {
+            font-size: 18px; 
+            color: $green;
+        }
+        .aramaSayi {font-size: 12px; color: $aGray; display: none;}
     }
     &-sort-desktop{
         /*width: calc(100% - 300px);*/
         float: right;
         display: inline-block;
-        max-width: 217px;
+        max-width: 237px;
         width: 100%;
         position: relative;
         height: 40px;
+        padding-right: 20px;
+        border-right:1px solid $gray;
         .dropdown-list-inner {
             position: relative;
             z-index: 4;
@@ -447,8 +461,17 @@
             }
         }
     }
-    &-sort, &-stock{
+    &-sort{
         display: none;
+    }
+    &-stock {
+        float: right;
+        padding: 14px 20px 10px 11px;
+        margin-right: 20px;
+        border-right: 1px solid $gray;
+        color:$green;
+        display: none;
+        span.checkbox .sStylerMainWrp span.cStyler.checked {background: $green; border-color: $green;}
     }
     &-view{
         float: right;
@@ -1116,6 +1139,7 @@ ul.emosInfinite {
         }
         &-footer {
             width: 100%;
+            min-height: 44px;
             padding:10px 20px 20px 15px;
             display: flex;
             justify-content: space-between;
@@ -1196,7 +1220,7 @@ ul.emosInfinite {
                 }
                 a {
                     &:empty {
-                        min-height: 96px;
+                        min-height: 118px;
                         display: inline-block;
                     }
                 }
@@ -1323,6 +1347,9 @@ ul.emosInfinite {
                     display: block;
                     letter-spacing: 1px;
                     line-height: normal;
+                    span {
+                        padding: 0;
+                    }
                 }
                 &.btnStokHaberci {
                     position: absolute; 
@@ -1369,7 +1396,34 @@ ul.emosInfinite {
                 } 
             }
         }
+        &.on-siparis {
+            .ems-prd-detail-link {
+                a {
+                    background: $yellow;
+                }
+           }
+            &:hover {
+                .ems-prd-inner {
+                   border:2px solid $yellow; 
+                   .ems-prd-detail-link {
+                        a {
+                            background: $yellow;
+                        }
+                   }
+                } 
+            }
+            .onSiparisLbf {
+                display: block !important;               
+            }
+            .secinLbf {
+                display: none;
+            }
+        }
     }   
+}
+
+.onSiparisLbf {
+    display: none !important;               
 }
 
 .catTags {
@@ -1773,6 +1827,19 @@ body.dortlu{
         }
     }
     
+    .listNav {
+        position: relative;
+        .listNavWrp {
+            .ems-prd-list-stock {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+
+            }
+        }
+    }
+
     .mobile-element{
         &-sort-btns{
             display: table;
@@ -1908,6 +1975,7 @@ body.dortlu{
                 letter-spacing: 1px;
                 text-align: center;
             }
+            .aramaSayi {display: none;}
         }
         &-paging-bottom{
             position: relative;
@@ -2251,6 +2319,11 @@ body.dortlu{
 @media screen and (max-width: 480px){
     ul.emosInfinite .ems-prd {
         width: 100% !important;
+        &-name-cat {
+            a:empty {
+                min-height: auto;
+            }
+        }
     }
     .ems-list-banner-property {
         .swiper-slide {

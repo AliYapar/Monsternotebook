@@ -140,10 +140,10 @@
             margin-bottom: 0 !important;
         } 
     }
-    .swiper-title {
+    .swiper-title { 
         text-align: center;
         position: relative;
-        h4 {
+        h4, h2, h3, > span { 
             font-size: 48px;
             font-family: $sbold;
             text-align: center;
@@ -455,7 +455,7 @@
         .swiper-inner {
         }
         .swiper-title {
-            h4 {
+            h4, h2, h3, > span {
                 font-size: 24px;
             }
             a {
@@ -573,8 +573,8 @@
     }
     .widget-view-auto {
         .swiper-title {
-            h4 {
-                font-size: 24px !important;
+            h1 {
+                font-size: 24px !important; 
             }
         }
         .swiper-img {

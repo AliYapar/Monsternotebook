@@ -148,10 +148,13 @@
             padding: 70px 50px 50px 50px;
             max-width: 920px;
             &-title{
-                font-family: $sbold;
-                font-size: 25px;
-                display: block;
-                padding-bottom: 20px;
+                h1 {
+                    font-family: $sbold;
+                    font-size: 25px;
+                    display: block;
+                    padding-bottom: 20px;
+                    margin: 0;
+                }
             }
             &-text{
                 > *{
@@ -914,15 +917,21 @@
     table {
         tr {
             td {
-                padding: 5px;
+                padding: 5px 10px;
                 word-wrap: break-word; 
+                border-bottom: 1px solid $lGray;
+            }
+            &:last-child {
+                td {
+                    border: 0;
+                }
             }
         }
         tr:nth-child(1n) {
-            background: #44454a; 
+            background: $gray; 
         }
         tr:nth-child(2n) {
-            background: #6c7075; 
+            background: $gray; 
         }
         tr:nth-child(6n) {
             background: none; 

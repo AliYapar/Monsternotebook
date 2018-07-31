@@ -491,7 +491,7 @@ body.suggestions-popup-ready{
         }
         .allTechSpc {
             font-size: 14px;
-            color: $aGray;
+            color: $green;
             display: block;
             cursor: pointer;
             margin-top: 10px;
@@ -1564,6 +1564,7 @@ body.suggestions-popup-ready{
                         padding: 18px 5px 17px 5px;
                         max-width: 270px;
                     }
+                    
                 }
             }
             &-promotion{
@@ -1830,6 +1831,50 @@ body.suggestions-popup-ready{
             }
         }
     }
+    &.on-siparis {
+        .ems-prd-add-to-cart-inner {
+            .urunDetay_btnCustomize {
+                a {
+                    background: $yellow;
+                    padding: 12px 5px 10px 5px;
+                    &:hover {
+                        background: $blue;
+                    }
+                    span.addBasketCustom {
+                        display: none;
+                    }
+                    span.addBasketPreorder {
+                        display: block;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        .ems-sticky-tab-header {
+            .mini-custom-cart {
+                .sticky-add-to-cart {
+                    a {
+                        background: $yellow;
+                        padding: 11px 10px 8px 10px !important;
+                        &:hover {
+                            background: $blue;
+                        }
+                        span.addBasketCustom {
+                            display: none;
+                        }
+                        span.addBasketPreorder {
+                            display: block;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+.addBasketPreorder {
+    display: none;
 }
 
 @keyframes heartFadeInOut {
@@ -1907,22 +1952,14 @@ body.suggestions-popup-ready{
                         display: block;
                         text-align: center;
                         font-family: $sbold;
-                        height: 0;
-                        overflow:hidden;
-                        opacity: 0;
-                        @include transition (all .2s ease);
+                        height: 40px;
+                        border: 1px solid #fff;
+                        border-radius: 3px;
+                        padding: 6px;
+                        margin-top: 10px;
                     }
                     &:hover {
-                        background: #fb538c;
-                        .tmLpt {
-                            opacity: 1;
-                            border: 1px solid #fff;
-                            border-radius: 3px;
-                            padding: 6px;
-                            margin-top: 10px;
-                            height: 40px;
-                            overflow:visible;
-                        }
+                        background: $blue;
                     }
                 }
             }
@@ -1966,7 +2003,7 @@ body.suggestions-popup-ready{
         width: 100%;
         margin: 20px 0 10px 0; 
         .swiper-title {
-            h4 {
+            h4, > span {
                 margin: 50px 0;
             }
         }
@@ -2132,9 +2169,7 @@ body.suggestions-popup-ready{
         text-align: center;
         margin: 0;
         font-family: $sbold;
-        h3 {
-            margin: 20px 0; 
-        }
+        margin: 20px 0;
     }
     .gridTaksitBanka tr {
         
@@ -2515,6 +2550,7 @@ body.suggestions-popup-ready{
     }
     .gridRowUrunOzellik, .gridAlternateUrunOzellik {
         table {height: 0; overflow:hidden; display: block;}
+        tbody {display: block;}
         &.selected {
             table {
                 height:auto; overflow: visible;
@@ -2524,6 +2560,20 @@ body.suggestions-popup-ready{
                     content:'\e91a';
                 }
             }
+        }
+    }
+    .gridUrunOzellikTumu {
+        float: right;
+        margin-bottom:20px;
+        span {
+            font-family: "mediumA";
+            color: $green;
+            font-size: 14px; 
+            }
+        span.tmGoster {display: none;}
+        &.selected {
+            span.tmKapat {display: none;}
+            span.tmGoster {display:inline-block;}
         }
     }
 }
@@ -3650,7 +3700,7 @@ body.suggestions-popup-ready{
         .swiper-container {
             padding: 0;
             .swiper-title {
-                h4 {
+                h4, > span {
                     font-size: 18px;
                     margin: 15px 0;
                 }
@@ -4078,6 +4128,7 @@ body.suggestions-popup-ready{
       display: inline-block; }
       .ems-sticky-tab-content .row > div img {
         width: 100%; }
+    .ems-sticky-tab-content iframe {width: 100%;} 
     .ems-tab ul.lvl1 {
       border: 0; }
       .ems-tab ul.lvl1 li {
@@ -4085,6 +4136,7 @@ body.suggestions-popup-ready{
         display: inline-block; }
         .ems-tab ul.lvl1 li a.title span {
           font-size: 14px; } 
+    .view-360 .btn-view-360 {left: 20px;}
 }
 
 @media screen and (max-width: 480px) {  

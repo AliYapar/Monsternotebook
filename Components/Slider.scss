@@ -296,7 +296,7 @@
         left: 0;
         margin: 0 auto;
         text-align: center;
-        display: none !important;
+        /*display: none !important;*/
         .price-control{
             /*height: 40px;*/
             position: relative;
@@ -321,7 +321,7 @@
                 margin: 0;
                 font-weight: normal;
             }
-            h1{
+            h1, span.baslik{
                 font-family:$sbold;
                 font-size: 55px;
                 position: relative;
@@ -331,7 +331,7 @@
                 @include transition (all .2s ease);
                 text-shadow: 2px 0px 0px #04ffff, -2px 0px 0px #F6ACCA;
             }
-            h2{
+            h2, span.icerik{
                 font-family:$r;
                 font-size: 20px;
                 line-height: 2.2;
@@ -459,12 +459,12 @@
                         transform: perspective(1px) translateY(-50%);
                         opacity: 1;
                         z-index: 10;
-                        h1 {
+                        h1, span.baslik {
                             transition-delay: .2s;
                             bottom: 0;
                             opacity: 1;
                         }
-                        h2 {
+                        h2, span.icerik {
                             transition-delay: .4s;
                             bottom: 0;
                             opacity: 1;
@@ -1189,6 +1189,7 @@ button.swiper-pagination-bullet {
                 top: 0 !important;
                 transform: none !important;
                 text-align: center !important; 
+                display: none; 
                 > div {
                     &.title-small {display: none;}
                     &.title-large {

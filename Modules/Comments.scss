@@ -702,9 +702,30 @@
             }
         }
     }
+    .swiper-title { 
+        text-align: center;
+        position: relative;
+        h1 { 
+            font-size: 48px;
+            font-family: $sbold;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            color: #fff; 
+        }
+    }
 }
 
 @media screen and (max-width: $breakpointXSM){
+    .main-widget-comment {
+        .swiper-title {
+            h1 {
+                font-size: 24px;
+            }
+        } 
+    }
     .yorumListe_main {
         padding: 50px 15px 20px 15px;
         display: flex;
